@@ -1,4 +1,5 @@
 import { basics } from "../../data"
+import NextPageBtn from "./PageBtns"
 
 function Basics() {
   return (
@@ -42,6 +43,10 @@ function Basics() {
             </>
           )
         })}
+      </div>
+
+      <div className="page-btn-container">
+        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

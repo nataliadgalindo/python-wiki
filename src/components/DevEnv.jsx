@@ -1,4 +1,6 @@
 import { ide, compiler } from "../../data"
+import NextPageBtn from "./PageBtns"
+import LastPageBtn from "./PageBtns"
 
 function DevEnv() {
   return (
@@ -64,6 +66,11 @@ function DevEnv() {
             )
           })}
         </div>
+      </div>
+
+      <div className="page-btn-container">
+        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

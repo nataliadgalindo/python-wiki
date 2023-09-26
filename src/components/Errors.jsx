@@ -1,4 +1,6 @@
 import { errors } from "../../data"
+import NextPageBtn from "./PageBtns"
+import LastPageBtn from "./PageBtns"
 
 function Errors() {
   return (
@@ -21,6 +23,11 @@ function Errors() {
             </article>
           )
         })}
+      </div>
+
+      <div className="page-btn-container">
+        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

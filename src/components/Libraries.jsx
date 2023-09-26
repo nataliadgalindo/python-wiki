@@ -1,4 +1,6 @@
 import { libraries } from "../../data"
+import NextPageBtn from "./PageBtns"
+import LastPageBtn from "./PageBtns"
 
 function Libraries() {
   return (
@@ -25,9 +27,15 @@ function Libraries() {
                   The {name} {desc}
                 </p>
               </header>
+              <hr />
             </article>
           )
         })}
+      </div>
+
+      <div className="page-btn-container">
+        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

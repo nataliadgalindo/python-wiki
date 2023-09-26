@@ -4,8 +4,6 @@ function LearnLayout() {
   return (
     <div className="grid-container">
       <aside>
-        <h1>side nav</h1>
-
         <nav className="side-nav">
           {/* -342px */}
           <NavLink to="/">Home</NavLink>

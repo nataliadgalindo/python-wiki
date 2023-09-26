@@ -1,4 +1,5 @@
 import { styles } from "../../data"
+import LastPageBtn from "./PageBtns"
 
 function Styles() {
   return (
@@ -15,9 +16,14 @@ function Styles() {
                 <h2>{name}</h2>
                 <p>{desc}</p>
               </header>
+              <hr />
             </article>
           )
         })}
+      </div>
+
+      <div className="page-btn-container">
+        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

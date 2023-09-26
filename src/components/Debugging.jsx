@@ -1,4 +1,6 @@
 import { debugging } from "../../data"
+import NextPageBtn from "./PageBtns"
+import LastPageBtn from "./PageBtns"
 
 function Debugging() {
   return (
@@ -20,6 +22,11 @@ function Debugging() {
             </>
           )
         })}
+      </div>
+
+      <div className="page-btn-container">
+        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

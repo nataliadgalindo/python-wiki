@@ -5,15 +5,12 @@ function MainLayout() {
     <>
       <nav className="top-nav">
         <NavLink to="/">
-          <img className="logo" src="/images/logo.png" alt="" />
+          <img className="logo" src="/logo.png" alt="" />
         </NavLink>
-        <h1>top nav</h1>
         <NavLink to="learn">Learn</NavLink>
       </nav>
 
-      <>
-        <Outlet />
-      </>
+      <Outlet />
     </>
   )
 }
