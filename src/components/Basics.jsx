@@ -1,5 +1,5 @@
 import { basics } from "../../data"
-import NextPageBtn from "./PageBtns"
+import { NextPageBtn } from "./PageBtns"
 
 function Basics() {
   return (

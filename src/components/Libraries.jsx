@@ -1,6 +1,5 @@
 import { libraries } from "../../data"
-import NextPageBtn from "./PageBtns"
-import LastPageBtn from "./PageBtns"
+import { NextPageBtn, LastPageBtn } from "./PageBtns"
 
 function Libraries() {
   return (

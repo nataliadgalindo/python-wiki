@@ -1,5 +1,5 @@
 import { styles } from "../../data"
-import LastPageBtn from "./PageBtns"
+import { LastPageBtn } from "./PageBtns"
 
 function Styles() {
   return (
