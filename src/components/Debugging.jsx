@@ -24,8 +24,8 @@ function Debugging() {
       </div>
 
       <div className="page-btn-container">
-        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
-        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <NextPageBtn name={"Python Libraries"} page={"/learn/libraries"} />
+        <LastPageBtn name={"Common Errors"} page={"/errors"} />
       </div>
     </>
   )

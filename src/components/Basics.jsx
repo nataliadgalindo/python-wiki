@@ -46,7 +46,7 @@ function Basics() {
       </div>
 
       <div className="page-btn-container">
-        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <NextPageBtn name={"Development Environment"} page={"/learn/devenv"} />
       </div>
     </>
   )

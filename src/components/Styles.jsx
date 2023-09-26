@@ -23,7 +23,7 @@ function Styles() {
       </div>
 
       <div className="page-btn-container">
-        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <LastPageBtn name={"Python Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

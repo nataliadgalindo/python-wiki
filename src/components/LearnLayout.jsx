@@ -7,12 +7,12 @@ function LearnLayout() {
         <nav className="side-nav">
           {/* -342px */}
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/learn">Basics</NavLink>
+          <NavLink to="/learn">The Basics</NavLink>
+          <NavLink to="devenv">Development Environment</NavLink>
+          <NavLink to="errors">Common Errors</NavLink>
           <NavLink to="debugging">Debugging</NavLink>
-          <NavLink to="devenv">DevEnv</NavLink>
-          <NavLink to="errors">Errors</NavLink>
-          <NavLink to="libraries">Libraries</NavLink>
-          <NavLink to="styles">Styles</NavLink>
+          <NavLink to="libraries">Python Libraries</NavLink>
+          <NavLink to="styles">Programming Styles</NavLink>
         </nav>
       </aside>
 

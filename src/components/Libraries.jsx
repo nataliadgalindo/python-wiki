@@ -33,8 +33,8 @@ function Libraries() {
       </div>
 
       <div className="page-btn-container">
-        <NextPageBtn name={"Libraries"} page={"/learn/libraries"} />
-        <LastPageBtn name={"Libraries"} page={"/learn/libraries"} />
+        <NextPageBtn name={"Programming Styles"} page={"/learn/styles"} />
+        <LastPageBtn name={"Debugging"} page={"/learn/debugging"} />
       </div>
     </>
   )
