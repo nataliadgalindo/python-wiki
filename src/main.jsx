@@ -19,9 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route index element={<App />} />
         <Route path="learn" element={<LearnLayout />}>
           <Route index element={<Basics />} />
-          <Route path="debugging" element={<Debugging />} />
           <Route path="devenv" element={<DevEnv />} />
           <Route path="errors" element={<Errors />} />
+          <Route path="debugging" element={<Debugging />} />
           <Route path="libraries" element={<Libraries />} />
           <Route path="styles" element={<Styles />} />
         </Route>
