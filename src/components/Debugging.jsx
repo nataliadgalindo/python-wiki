@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet"
 import { debugging } from "../../data"
 import { NextPageBtn, LastPageBtn } from "./PageBtns"
 
 function Debugging() {
   return (
     <>
+      <Helmet>
+        <title>Debugging</title>
+      </Helmet>
+
       <header id="section-header">
         <h1>Debugging</h1>
       </header>

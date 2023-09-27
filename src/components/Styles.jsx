@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet"
 import { styles } from "../../data"
 import { LastPageBtn } from "./PageBtns"
 
 function Styles() {
   return (
     <>
+      <Helmet>
+        <title>Programming Styles and Paradigms</title>
+      </Helmet>
+
       <header id="section-header">
         <h1>Programming Styles and Paradigms</h1>
       </header>

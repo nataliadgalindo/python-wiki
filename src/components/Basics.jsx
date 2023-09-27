@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet"
 import { basics } from "../../data"
 import { NextPageBtn } from "./PageBtns"
 
 function Basics() {
   return (
     <>
+      <Helmet>
+        <title>The Basics of Python</title>
+      </Helmet>
+
       <header id="section-header">
         <h1>Python Basics</h1>
       </header>
@@ -11,8 +16,8 @@ function Basics() {
       <div className="section-content">
         {basics.map(({ title, desc, types, funcs }, i) => {
           return (
-            <>
-              <article key={i}>
+            <div key={i}>
+              <article>
                 <header>
                   <h2>{title}</h2>
                   <p>{desc}</p>
@@ -20,8 +25,8 @@ function Basics() {
 
                 {types && (
                   <ul>
-                    {types.map((type, i) => (
-                      <li key={i}>
+                    {types.map((type, j) => (
+                      <li key={j}>
                         {type.name}: {type.desc}
                       </li>
                     ))}
@@ -30,8 +35,8 @@ function Basics() {
 
                 {funcs && (
                   <ul>
-                    {funcs.map((func, i) => (
-                      <li key={i}>
+                    {funcs.map((func, j) => (
+                      <li key={j}>
                         {func.name}(): {func.desc}
                       </li>
                     ))}
@@ -40,7 +45,7 @@ function Basics() {
               </article>
 
               <hr />
-            </>
+            </div>
           )
         })}
       </div>

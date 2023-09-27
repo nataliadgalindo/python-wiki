@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet"
 import { ide, compiler } from "../../data"
 import { NextPageBtn, LastPageBtn } from "./PageBtns"
 
 function DevEnv() {
   return (
     <>
+      <Helmet>
+        <title>Development Environment</title>
+      </Helmet>
+
       <header id="section-header">
         <h1>Development Environment</h1>
       </header>

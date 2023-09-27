@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet"
 import { errors } from "../../data"
 import { NextPageBtn, LastPageBtn } from "./PageBtns"
 
 function Errors() {
   return (
     <>
+      <Helmet>
+        <title>Common Errors</title>
+      </Helmet>
+
       <header id="section-header">
         <h1>Common Errors</h1>
       </header>
