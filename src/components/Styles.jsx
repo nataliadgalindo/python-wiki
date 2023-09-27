@@ -4,20 +4,22 @@ import { LastPageBtn } from "./PageBtns"
 function Styles() {
   return (
     <>
-      <header>
+      <header id="section-header">
         <h1>Programming Styles and Paradigms</h1>
       </header>
 
-      <div>
+      <div className="section-content">
         {styles.map(({ name, desc }, i) => {
           return (
-            <article key={i}>
-              <header>
-                <h2>{name}</h2>
-                <p>{desc}</p>
-              </header>
+            <>
+              <article key={i}>
+                <header>
+                  <h2>{name}</h2>
+                  <p>{desc}</p>
+                </header>
+              </article>
               <hr />
-            </article>
+            </>
           )
         })}
       </div>

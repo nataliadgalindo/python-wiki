@@ -4,12 +4,12 @@ import { NextPageBtn, LastPageBtn } from "./PageBtns"
 function DevEnv() {
   return (
     <>
-      <header>
+      <header id="section-header">
         <h1>Development Environment</h1>
       </header>
 
-      <div>
-        <header>
+      <div className="subsection">
+        <header className="subsection-header">
           <h2>IDE</h2>
           <p>
             An Integrated Development Environment, commonly referred to as an
@@ -20,9 +20,7 @@ function DevEnv() {
           </p>
         </header>
 
-        <h2>Key Features</h2>
-
-        <div>
+        <div className="section-content">
           {ide.map(({ title, desc }, i) => {
             return (
               <>
@@ -38,8 +36,8 @@ function DevEnv() {
         </div>
       </div>
 
-      <div>
-        <header>
+      <div className="subsection">
+        <header className="subsection-header">
           <h2>Compilers</h2>
           <p>
             A compiler is a specialized software tool that translates high-level
@@ -49,9 +47,7 @@ function DevEnv() {
           </p>
         </header>
 
-        <h2>How It Works</h2>
-
-        <div>
+        <div className="section-content">
           {compiler.map(({ step, desc }, i) => {
             return (
               <>

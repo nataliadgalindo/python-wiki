@@ -4,11 +4,11 @@ import { NextPageBtn } from "./PageBtns"
 function Basics() {
   return (
     <>
-      <header>
+      <header id="section-header">
         <h1>Python Basics</h1>
       </header>
 
-      <div>
+      <div className="section-content">
         {basics.map(({ title, desc, types, funcs }, i) => {
           return (
             <>

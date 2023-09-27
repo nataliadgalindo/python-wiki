@@ -4,7 +4,7 @@ import { NextPageBtn, LastPageBtn } from "./PageBtns"
 function Libraries() {
   return (
     <>
-      <header>
+      <header id="section-header">
         <h1>Libraries</h1>
         <p>
           Python libraries are collections of pre-written code that provide
@@ -14,20 +14,20 @@ function Libraries() {
         </p>
       </header>
 
-      <h2>Simple Examples</h2>
-
-      <div>
+      <div className="section-content">
         {libraries.map(({ name, desc }, i) => {
           return (
-            <article key={i}>
-              <header>
-                <h3>{name}</h3>
-                <p>
-                  The {name} {desc}
-                </p>
-              </header>
+            <>
+              <article key={i}>
+                <header>
+                  <h3>{name}</h3>
+                  <p>
+                    The {name} {desc}
+                  </p>
+                </header>
+              </article>
               <hr />
-            </article>
+            </>
           )
         })}
       </div>

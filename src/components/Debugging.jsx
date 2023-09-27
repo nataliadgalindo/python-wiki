@@ -4,11 +4,11 @@ import { NextPageBtn, LastPageBtn } from "./PageBtns"
 function Debugging() {
   return (
     <>
-      <header>
+      <header id="section-header">
         <h1>Debugging</h1>
       </header>
 
-      <div>
+      <div className="section-content">
         {debugging.map(({ title, desc }, i) => {
           return (
             <>
