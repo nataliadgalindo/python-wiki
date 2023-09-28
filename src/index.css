@@ -17,31 +17,111 @@
   src: url("/assets/fonts/balsamiq-sans-v14-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-* {
+/* global */
+
+*,
+::after,
+::before {
   font-family: "Balsamiq Sans", sans-serif;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
-/* Style for inline code */
-code {
-  background-color: #f2f2f2;
-  color: #333;
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-family: Consolas, monospace;
-  margin: 0 4px;
+body {
+  min-height: 100vh;
 }
 
-/* Style for code blocks */
-pre code {
-  display: block;
-  background-color: #f2f2f2;
-  color: #333;
-  padding: 10px;
-  border-radius: 4px;
-  font-family: Consolas, monospace;
-  white-space: pre-wrap; /* Preserve line breaks */
-}
+/* code snippets */
 
 code > * {
   font-family: Consolas, monospace;
+}
+
+/* inline code */
+code {
+  font-family: Consolas, monospace;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 0.125rem 0.25rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+}
+
+/* code blocks */
+pre code {
+  display: block;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+}
+
+@media screen and (min-width: 1024px) {
+  /* global */
+
+  body {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgb(37, 48, 65);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* top nav */
+
+  .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 80%;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .top-nav a:hover:not(.logo) {
+    border-bottom: 2px solid #2b77b2;
+  }
+
+  /* home page */
+
+  .home-page {
+    height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-header {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+  }
+
+  .home-header .logo {
+    width: 128px;
+  }
+
+  .home-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-header p {
+    font-size: 1.75rem;
+  }
+
+  .main-btn {
+    background-color: #2b77b2;
+    border-radius: 30px;
+    padding: 0.75rem 1.25rem;
+  }
 }
