@@ -4,8 +4,8 @@ function MainLayout() {
   return (
     <>
       <nav className="top-nav">
-        <NavLink to="/">
-          <img className="logo" src="/logo.png" alt="" />
+        <NavLink className="logo" to="/">
+          <img src="/logo.png" alt="" />
         </NavLink>
         <NavLink to="learn">Learn</NavLink>
       </nav>

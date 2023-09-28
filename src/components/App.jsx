@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 function App() {
   return (
-    <>
+    <div className="home-page">
       <Helmet>
         <title>Python Wiki</title>
       </Helmet>
@@ -20,7 +20,7 @@ function App() {
           Learn Python
         </NavLink>
       </header>
-    </>
+    </div>
   )
 }
 
