@@ -20,3 +20,28 @@
 * {
   font-family: "Balsamiq Sans", sans-serif;
 }
+
+/* Style for inline code */
+code {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  margin: 0 4px;
+}
+
+/* Style for code blocks */
+pre code {
+  display: block;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  white-space: pre-wrap; /* Preserve line breaks */
+}
+
+code > * {
+  font-family: Consolas, monospace;
+}
