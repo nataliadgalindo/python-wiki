@@ -60,6 +60,10 @@ pre code {
   white-space: pre-wrap;
 }
 
+pre {
+  margin: 1rem 0;
+}
+
 @media screen and (min-width: 1024px) {
   /* home page */
 
@@ -214,6 +218,19 @@ pre code {
 
   .last-page-btn {
     align-self: left;
+  }
+
+  .section-content div {
+    padding-top: 1rem;
+  }
+
+  .section-content div > article {
+    margin: 2rem 0;
+  }
+
+  .section-content h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
   }
 
   /* basics page */

@@ -354,7 +354,7 @@ function Basics() {
                     <pre>
                       <code>
                         {code.map((line, j) => {
-                          return <div key={j}>{line}</div>
+                          return <p key={j}>{line}</p>
                         })}
                       </code>
                     </pre>
