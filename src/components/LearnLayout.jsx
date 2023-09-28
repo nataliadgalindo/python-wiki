@@ -5,8 +5,6 @@ function LearnLayout() {
     <div className="grid-container">
       <aside>
         <nav className="side-nav">
-          {/* -342px */}
-          <NavLink to="/">Home</NavLink>
           <NavLink to="/learn">The Basics</NavLink>
           <NavLink to="devenv">Development Environment</NavLink>
           <NavLink to="errors">Common Errors</NavLink>
