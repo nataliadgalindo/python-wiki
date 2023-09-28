@@ -11,7 +11,7 @@ function Basics() {
         <article className="subsection">
           <header className="subsection-header">
             <h2>{title}</h2>
-            <p>{desc}</p>
+            {desc}
           </header>
 
           <div>{children}</div>
@@ -48,7 +48,10 @@ function Basics() {
         <SubSection
           title={"Comments"}
           desc={
-            "Comments are notes you can add to your code for yourself or other programmers to read. They dont affect how the program runs."
+            <p>
+              Comments are notes you can add to your code for yourself or other
+              programmers to read. They dont affect how the program runs.
+            </p>
           }
         >
           <div>
@@ -66,12 +69,14 @@ function Basics() {
 
         <SubSection
           title={"Variables"}
-          desc={"Variables are containers for storing data values."}
+          desc={
+            <p>
+              Variables are containers for storing data values. All you need to
+              do is assign a piece of data to a value of your choice with the
+              equal sign.
+            </p>
+          }
         >
-          <p>
-            All you need to do is assign a piece of data to a value of your
-            choice with the equal sign.
-          </p>
           <div>
             <h3>Example</h3>
             <pre>
@@ -86,7 +91,10 @@ function Basics() {
         <SubSection
           title={"Data Types"}
           desc={
-            "There are many different data types in programming and they can all do different things."
+            <p>
+              There are many different data types in programming and they can
+              all do different things.
+            </p>
           }
         >
           <p>Here are the most basic, important data types you should know:</p>
@@ -105,14 +113,13 @@ function Basics() {
         <SubSection
           title={"Lists"}
           desc={
-            "Lists are a way of keeping multiple items together in one place."
+            <p>
+              Lists are a way of keeping multiple items together in one place.
+              Like a container that can store many things at once, lists store
+              many pieces of data at once when assigned to a variable.
+            </p>
           }
         >
-          <p>
-            Like a container that can store many things at once, lists store
-            many pieces of data at once when assigned to a variable.
-          </p>
-
           <div>
             <h3>Example</h3>
 
@@ -179,13 +186,15 @@ function Basics() {
 
         <SubSection
           title={"Dictionaries"}
-          desc={"Dictionaries are collections of key:value pairs."}
+          desc={
+            <p>
+              Dictionaries are collections of key:value pairs.
+              <br />
+              Another example of <u>data structures</u>, dictionaries can hold
+              multiple data values of any type.
+            </p>
+          }
         >
-          <p>
-            Another example of <u>data structures</u>, dictionaries can hold
-            multiple data values of any type.
-          </p>
-
           <div>
             <h3>Example</h3>
             <pre>
@@ -290,7 +299,10 @@ function Basics() {
         <SubSection
           title={"Basic Operations"}
           desc={
-            "Python allows you to perform arithmetic operations like addition, subtraction, multiplication, and division."
+            <p>
+              Python allows you to perform arithmetic operations like addition,
+              subtraction, multiplication, and division.
+            </p>
           }
         >
           <div>
@@ -324,7 +336,10 @@ function Basics() {
         <SubSection
           title={"Common Functions"}
           desc={
-            "Python has many built-in functions that we can use to save code and take advantage of all the features available to us."
+            <p>
+              Python has many built-in functions that we can use to save code
+              and take advantage of all the features available to us.
+            </p>
           }
         >
           <ul>
@@ -353,7 +368,10 @@ function Basics() {
         <SubSection
           title={"Conditional Statements"}
           desc={
-            "Conditional statements are used when you want to execute code based off a logical or mathematical condition."
+            <p>
+              Conditional statements are used when you want to execute code
+              based off a logical or mathematical condition.
+            </p>
           }
         >
           <p>
@@ -457,161 +475,164 @@ function Basics() {
         <SubSection
           title={"Functions"}
           desc={
-            "Functions are reusable blocks of code that perform specific tasks and only run when you call it."
+            <p>
+              Functions are reusable blocks of code that perform specific tasks
+              and only run when you call it.
+            </p>
           }
         >
-          <div>
-            <p>
-              In Python, they are defined with the<code>def</code>keyword.
-            </p>
+          <p>
+            In Python, they are defined with the<code>def</code>keyword.
+          </p>
 
-            <h3>Example</h3>
+          <h3>Example</h3>
 
-            <pre>
-              <code>
-                def my_function():
-                <br />
-                {'  print("Hello, world! I was printed from a function")'}
-              </code>
-            </pre>
+          <pre>
+            <code>
+              def my_function():
+              <br />
+              {'  print("Hello, world! I was printed from a function")'}
+            </code>
+          </pre>
 
-            <p>
-              In order to call it and run the code within, you just use the
-              function name and attach the parenthesis.
-            </p>
+          <p>
+            In order to call it and run the code within, you just use the
+            function name and attach the parenthesis.
+          </p>
 
-            <pre>
-              <code>
-                def my_function():
-                <br />
-                {'  print("Hello, world! I was printed from a function")'}
-                <br />
-                <br />
-                <strong>my_function()</strong>
-              </code>
-            </pre>
+          <pre>
+            <code>
+              def my_function():
+              <br />
+              {'  print("Hello, world! I was printed from a function")'}
+              <br />
+              <br />
+              <strong>my_function()</strong>
+            </code>
+          </pre>
 
-            <article>
-              <header>
-                <h3>Arguments and Parameters</h3>
-                <p>
-                  Both terms can be used for the same thing: information passed
-                  into a function.
-                </p>
-              </header>
+          <article>
+            <header>
+              <h3>Arguments and Parameters</h3>
+              <p>
+                Both terms can be used for the same thing: information passed
+                into a function.
+              </p>
+            </header>
 
-              <div>
-                <p>
-                  A <i>parameter</i> is a variable set inside the parenthesis of
-                  the function when you define it. You can have as many as you
-                  want, as long as they're separated by a comma.
-                </p>
-                <p>
-                  An <i>argument</i> is the value that is sent back to the
-                  function when you call it, also set in the parenthesis.
-                </p>
+            <div>
+              <p>
+                A <i>parameter</i> is a variable set inside the parenthesis of
+                the function when you define it. You can have as many as you
+                want, as long as they're separated by a comma.
+              </p>
+              <p>
+                An <i>argument</i> is the value that is sent back to the
+                function when you call it, also set in the parenthesis.
+              </p>
 
-                <pre>
-                  <code>
-                    def my_function(fname, lname):
-                    <br />
-                    {"  print(fname)"}
-                    <br />
-                    {"  print(lname)"}
-                    <br />
-                    <br />
-                    my_function("John", "Doe")
-                  </code>
-                </pre>
+              <pre>
+                <code>
+                  def my_function(fname, lname):
+                  <br />
+                  {"  print(fname)"}
+                  <br />
+                  {"  print(lname)"}
+                  <br />
+                  <br />
+                  my_function("John", "Doe")
+                </code>
+              </pre>
 
-                <p>
-                  When the function is defined, two parameters are set,
-                  <code>fname</code>and<code>lname</code>. When it's called, the
-                  two corresponding arguments,<code>"John"</code>and
-                  <code>"Doe"</code>, are sent back and will replace the
-                  variables in the print statements.
-                </p>
-              </div>
-            </article>
-          </div>
+              <p>
+                When the function is defined, two parameters are set,
+                <code>fname</code>and<code>lname</code>. When it's called, the
+                two corresponding arguments,<code>"John"</code>and
+                <code>"Doe"</code>, are sent back and will replace the variables
+                in the print statements.
+              </p>
+            </div>
+          </article>
         </SubSection>
 
         <SubSection
           title={"Indentation"}
           desc={
-            "Python uses indentation (whitespace) to indicate blocks of code."
+            <p>
+              Python uses indentation (whitespace) to indicate blocks of code.
+            </p>
           }
         >
-          <div>
-            <p>
-              Proper indentation is essential for readability and to define the
-              scope of statements within loops, functions, and conditional
-              statements.
-            </p>
+          <p>
+            Proper indentation is essential for readability and to define the
+            scope of statements within loops, functions, and conditional
+            statements.
+          </p>
 
-            <article>
-              <header>
-                <h3>Scope</h3>
-                <p>
-                  Scope is like a rulebook that tells you where can use certain
-                  variables in your code. There are two main types of scope.
-                </p>
-              </header>
+          <article>
+            <header>
+              <h3>Scope</h3>
+              <p>
+                Scope is like a rulebook that tells you where can use certain
+                variables in your code. There are two main types of scope.
+              </p>
+            </header>
 
-              <ol>
-                <li>
-                  <strong>Local Scope:</strong>
-                  <br />
-                  Think of this as a small box inside your code where certain
-                  variables or functions live. Variables in a local scope can
-                  only be used and seen from within that box. When you create a
-                  variable inside a function, it belongs to the local scope of
-                  that function, meaning you can't use it anywhere else except
-                  there.
-                  <pre>
-                    <code>
-                      def my_function():
-                      <br />
-                      {"  x = 10"}
-                    </code>
-                  </pre>
-                </li>
+            <ol>
+              <li>
+                <strong>Local Scope:</strong>
                 <br />
-                <li>
-                  <strong>Global Scope:</strong>
-                  <br />
-                  This is a bigger box that contains everything in your code.
-                  Variables and functions in the global scope can be used and
-                  seen from anywhere in your code. When you create a variable or
-                  function outside of any function or anywhere in a local scope,
-                  it's in the global scope.
-                  <pre>
-                    <code>
-                      x = 30 # This is in the global scope
-                      <br />
-                      <br />
-                      def my_function():
-                      <br />
-                      {"  x = 10"} # This is in the local scope of my_function
-                      <br />
-                      {"  print(x)"} # This will print the local x, which is 40
-                      <br />
-                      <br />
-                      my_function()
-                      <br />
-                      <br />
-                      print(x) # This will print the global x, which is 30
-                    </code>
-                  </pre>
-                </li>
-              </ol>
-            </article>
-          </div>
+                Think of this as a small box inside your code where certain
+                variables or functions live. Variables in a local scope can only
+                be used and seen from within that box. When you create a
+                variable inside a function, it belongs to the local scope of
+                that function, meaning you can't use it anywhere else except
+                there.
+                <pre>
+                  <code>
+                    def my_function():
+                    <br />
+                    {"  x = 10"}
+                  </code>
+                </pre>
+              </li>
+              <br />
+              <li>
+                <strong>Global Scope:</strong>
+                <br />
+                This is a bigger box that contains everything in your code.
+                Variables and functions in the global scope can be used and seen
+                from anywhere in your code. When you create a variable or
+                function outside of any function or anywhere in a local scope,
+                it's in the global scope.
+                <pre>
+                  <code>
+                    x = 30 # This is in the global scope
+                    <br />
+                    <br />
+                    def my_function():
+                    <br />
+                    {"  x = 10"} # This is in the local scope of my_function
+                    <br />
+                    {"  print(x)"} # This will print the local x, which is 40
+                    <br />
+                    <br />
+                    my_function()
+                    <br />
+                    <br />
+                    print(x) # This will print the global x, which is 30
+                  </code>
+                </pre>
+              </li>
+            </ol>
+          </article>
         </SubSection>
 
         <SubSection
           title={"Loops"}
-          desc={"Python supports for and while loops for repetitive tasks."}
+          desc={
+            <p>Python supports for and while loops for repetitive tasks.</p>
+          }
         >
           <article>
             <header>

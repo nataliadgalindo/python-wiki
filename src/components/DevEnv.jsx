@@ -69,8 +69,8 @@ function DevEnv() {
       </div>
 
       <div className="page-btn-container">
-        <NextPageBtn name={"Common Errors"} page={"/learn/errors"} />
         <LastPageBtn name={"The Basics"} page={"/learn"} />
+        <NextPageBtn name={"Common Errors"} page={"/learn/errors"} />
       </div>
     </>
   )

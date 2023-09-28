@@ -10,10 +10,10 @@ function App() {
 
       <header className="home-header">
         <img className="logo" src="/logo.png" alt="" />
-        <h1>Python</h1>
+        <h1>Python Wiki</h1>
         <p>
-          A programming language that lets you work quickly and integrate
-          systems more effectively
+          A guide to progressing at Python, everything you need to know all in
+          one place
         </p>
 
         <NavLink to={"learn"} className="main-btn">

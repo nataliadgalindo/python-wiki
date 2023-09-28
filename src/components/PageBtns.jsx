@@ -11,7 +11,7 @@ export function NextPageBtn({ name, page }) {
         <p>NEXT</p>
         <span>{name}</span>
       </div>
-      {/* arrow icon */}
+      <p>{">"}</p>
     </NavLink>
   )
 }
@@ -23,7 +23,7 @@ export function LastPageBtn({ name, page }) {
         <p>PREVIOUS</p>
         <span>{name}</span>
       </div>
-      {/* arrow icon */}
+      <p>{"<"}</p>
     </NavLink>
   )
 }

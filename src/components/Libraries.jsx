@@ -38,8 +38,8 @@ function Libraries() {
       </div>
 
       <div className="page-btn-container">
+        <LastPageBtn name={"Debugging"} page={"/learn/debugging"} />{" "}
         <NextPageBtn name={"Programming Styles"} page={"/learn/styles"} />
-        <LastPageBtn name={"Debugging"} page={"/learn/debugging"} />
       </div>
     </>
   )

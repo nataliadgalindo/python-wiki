@@ -32,8 +32,8 @@ function Errors() {
       </div>
 
       <div className="page-btn-container">
-        <NextPageBtn name={"Debugging"} page={"/learn/debugging"} />
         <LastPageBtn name={"Development Environment"} page={"/learn/devenv"} />
+        <NextPageBtn name={"Debugging"} page={"/learn/debugging"} />
       </div>
     </>
   )
