@@ -26,7 +26,7 @@ function DevEnv() {
         </header>
 
         <div className="section-content">
-          {ide.map(({ title, desc }, i) => {
+          {ide.map(({ title, desc, img }, i) => {
             return (
               <div key={i}>
                 <article className="devenv-article">

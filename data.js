@@ -111,18 +111,22 @@ export const ide = [
   {
     title: "Code Editor",
     desc: "An IDE includes a code editor with features like syntax highlighting, auto-completion, and code navigation.",
+    img: "/assets/images/code.png",
   },
   {
     title: "Debugger",
     desc: "IDEs typically have a built-in debugger for finding and fixing code errors.",
+    img: "/assets/images/debug.png",
   },
   {
     title: "Build and Compilation Tools",
     desc: "IDEs often come with tools for building and compiling code, making it easy to create executable programs.",
+    img: "/assets/images/execute.png",
   },
   {
     title: "Language and Framework Support",
     desc: "IDEs are typically designed for specific programming languages or frameworks, and they may offer advanced features tailored to those technologies.",
+    img: "/assets/images/python.png",
   },
 ]
 
