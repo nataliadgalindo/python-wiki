@@ -1,62 +1,82 @@
 export const basics = [
   {
-    title: "Variables",
-    desc: "You can create variables to store data",
-  },
-  {
-    title: "Data Types",
-    desc: "You can create variables to store data",
     types: [
       {
         name: "Strings",
-        desc: "Text enclosed in single or double quotes like Hello or Python.",
+        desc:
+          "Text enclosed in single or double quotes like " +
+          '"Hello"' +
+          " or 'Python'.",
       },
-      { name: "Intergers", desc: "Whole numbers like 1, 2, -3." },
+      { name: "Integers", desc: "Whole numbers like 1, 2, -3." },
       { name: "Floats", desc: "Numbers with decimal points like 3.14, -0.5." },
       { name: "Boolean", desc: "Represents either True or False." },
     ],
   },
   {
-    title: "Common Functions",
-    desc: "Common functions",
     funcs: [
       {
         name: "print",
-        desc: "a built-in Python function used to display text or values on the screen.",
+        desc: "Used to display text or values on the screen.",
+        code: ['print("Hello, World!")'],
+      },
+      {
+        name: "input",
+        desc: "Used to get user input from the console. It waits for the user to enter something and returns it as a string.",
+        code: ['name = input("Enter your name: ")'],
+      },
+      {
+        name: "len",
+        desc: "Returns the length (number of elements) of a variable, such as a string, list, or dictionary.",
+        code: ['text = "Python"', "length = len(text) # length is 6"],
+      },
+      {
+        name: "int",
+        desc: "Functions for converting between different data types (integer, floating-point, and string).",
+        code: [
+          'num_str = "42"',
+          "num_int = int(num_str) # Convert to integer",
+          "num_float = float(num_str) # Convert to floating-point",
+        ],
+      },
+      {
+        name: "type",
+        desc: "Returns the data type of an object.",
+        code: ["x = 42", "print(type(x))  # <class 'int'>"],
+      },
+      {
+        name: "range",
+        desc: "Generates a sequence of numbers.",
+        code: ["numbers = range(1, 6) # Generates 1, 2, 3, 4, 5"],
+      },
+      {
+        name: "max()/min",
+        desc: "Returns the maximum or minimum value in an iterable (e.g. a list).",
+        code: [
+          "numbers = [5, 2, 9, 1, 8]",
+          "max_value = max(numbers)  # 9",
+          "min_value = min(numbers)  # 1",
+        ],
+      },
+      {
+        name: "sum",
+        desc: "Calculates the sum of all elements in an iterable.",
+        code: ["numbers = [1, 2, 3, 4, 5]", "total = sum(numbers) # 15"],
+      },
+      {
+        name: "round",
+        desc: "Rounds a floating-point number to the nearest integer.",
+        code: ["pi = 3.14159", "rounded_pi = round(pi) # 3"],
+      },
+      {
+        name: "sorted",
+        desc: "Returns a sorted version of a list.",
+        code: [
+          "unsorted_list = [3, 1, 2, 5, 4]",
+          "sorted_list = sorted(unsorted_list) # [1, 2, 3, 4, 5]",
+        ],
       },
     ],
-  },
-  {
-    title: "Lists",
-    desc: "Lists are ordered collections of items",
-  },
-  {
-    title: "Dictionaries",
-    desc: "Dictionaries are collections of key-value pairs",
-  },
-  {
-    title: "Conditional Statements",
-    desc: "You can use if, elif (short for else if), and else to create conditional statements",
-  },
-  {
-    title: "Basic Operations",
-    desc: "Python allows you to perform arithmetic operations like addition, subtraction, multiplication, and division",
-  },
-  {
-    title: "Functions",
-    desc: "Functions are reusable blocks of code that perform specific tasks. You can define your functions",
-  },
-  {
-    title: "Loops",
-    desc: "Python supports for and while loops for repetitive tasks",
-  },
-  {
-    title: "Comments",
-    desc: "Comments are notes you can add to your code for yourself or other programmers to read. They dont affect how the program runs",
-  },
-  {
-    title: "Indentation",
-    desc: "Python uses indentation (whitespace) to indicate blocks of code. Proper indentation is essential for readability and to define the scope of statements within loops, functions, and conditional statements.",
   },
 ]
 
@@ -174,11 +194,11 @@ export const libraries = [
 export const styles = [
   {
     name: "Imperative Programming",
-    desc: "a style where you write code that explicitly describes the steps the computer should take to achieve a particular task. It focuses on how to perform actions.",
+    desc: "A style where you write code that explicitly describes the steps the computer should take to achieve a particular task. It focuses on how to perform actions.",
   },
   {
     name: "Procedural Programming",
-    desc: "a subset of imperative programming. It involves organizing code into reusable procedures or functions, which helps in code modularity and maintainability.",
+    desc: "A subset of imperative programming. It involves organizing code into reusable procedures or functions, which helps in code modularity and maintainability.",
   },
   {
     name: "Object-Oriented Programming",
@@ -186,6 +206,6 @@ export const styles = [
   },
   {
     name: "Functional Programming",
-    desc: "emphasizes immutability, pure functions, and the use of higher-order functions like map, reduce, and filter. It treats computation as the evaluation of mathematical functions",
+    desc: "Emphasizes immutability, pure functions, and the use of higher-order functions like map, reduce, and filter. It treats computation as the evaluation of mathematical functions.",
   },
 ]
