@@ -16,8 +16,8 @@ function Errors() {
       <div className="section-content">
         {errors.map(({ err, desc }, i) => {
           return (
-            <>
-              <article key={i}>
+            <div key={i}>
+              <article>
                 <header>
                   <h2>{err} Error</h2>
                   <p>
@@ -26,7 +26,7 @@ function Errors() {
                 </header>
               </article>
               <hr />
-            </>
+            </div>
           )
         })}
       </div>

@@ -28,14 +28,14 @@ function DevEnv() {
         <div className="section-content">
           {ide.map(({ title, desc }, i) => {
             return (
-              <>
-                <article key={i}>
+              <div key={i}>
+                <article>
                   <h3>{title}</h3>
                   <p>{desc}</p>
                 </article>
 
                 <hr />
-              </>
+              </div>
             )
           })}
         </div>
@@ -55,14 +55,14 @@ function DevEnv() {
         <div className="section-content">
           {compiler.map(({ step, desc }, i) => {
             return (
-              <>
-                <article key={i}>
+              <div key={i}>
+                <article>
                   <h3>{step}</h3>
                   <p>{desc}</p>
                 </article>
 
                 <hr />
-              </>
+              </div>
             )
           })}
         </div>

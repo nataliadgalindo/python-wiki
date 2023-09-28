@@ -22,8 +22,8 @@ function Libraries() {
       <div className="section-content">
         {libraries.map(({ name, desc }, i) => {
           return (
-            <>
-              <article key={i}>
+            <div key={i}>
+              <article>
                 <header>
                   <h3>{name}</h3>
                   <p>
@@ -32,7 +32,7 @@ function Libraries() {
                 </header>
               </article>
               <hr />
-            </>
+            </div>
           )
         })}
       </div>

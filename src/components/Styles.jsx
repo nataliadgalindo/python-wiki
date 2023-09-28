@@ -16,15 +16,15 @@ function Styles() {
       <div className="section-content">
         {styles.map(({ name, desc }, i) => {
           return (
-            <>
-              <article key={i}>
+            <div key={i}>
+              <article>
                 <header>
                   <h2>{name}</h2>
                   <p>{desc}</p>
                 </header>
               </article>
               <hr />
-            </>
+            </div>
           )
         })}
       </div>
