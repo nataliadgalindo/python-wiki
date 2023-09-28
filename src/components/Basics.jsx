@@ -356,104 +356,102 @@ function Basics() {
             "Conditional statements are used when you want to execute code based off a logical or mathematical condition."
           }
         >
-          <div>
-            <p>
-              The most common use of this in Python are<code>if</code>
-              statements.
-            </p>
+          <p>
+            The most common use of this in Python are<code>if</code>
+            statements.
+          </p>
 
-            <h3>Example</h3>
+          <h3>Example</h3>
 
-            <pre>
-              <code>
-                a = 24
+          <pre>
+            <code>
+              a = 24
+              <br />
+              b = 132
+              <br />
+              <br />
+              if b {">"} a:
+              <br />
+              {'  print("b is greater than a")'}
+            </code>
+          </pre>
+
+          <p>
+            On the first line of the if statement, we check if the value of
+            <code>b</code>is greater than<code>a</code>, and if it's true, the
+            rest of the code after the colon<code>:</code>is executed and we get
+            the printed message.
+          </p>
+
+          <article>
+            <header>
+              <h3>Elif and Else</h3>
+              <p>
+                These are keywords used if the previous conditions of an if
+                statement were false.
+              </p>
+            </header>
+
+            <ol>
+              <li>
+                <strong>elif:</strong>
                 <br />
-                b = 132
+                Short for else if, elif is like trying another condition if the
+                last one was false.
+                <pre>
+                  <code>
+                    temperature = 25
+                    <br />
+                    <br />
+                    if temperature {">"} 30:
+                    <br />
+                    {'  print("It is hot outside!")'}
+                    <br />
+                    elif temperature {">"} 20:
+                    <br />
+                    {'  print("It is warm, but not too hot.")'}
+                  </code>
+                </pre>
+                Since<code>temperature</code>is equal to 25, the first condition
+                would be false as it's not greater than 30. However, it is
+                greater than 20 so the second condition would be true and the
+                print statement would execute.
+              </li>
+
+              <br />
+
+              <li>
+                <strong>else:</strong>
                 <br />
-                <br />
-                if b {">"} a:
-                <br />
-                {'  print("b is greater than a")'}
-              </code>
-            </pre>
-
-            <p>
-              On the first line of the if statement, we check if the value of
-              <code>b</code>is greater than<code>a</code>, and if it's true, the
-              rest of the code after the colon<code>:</code>is executed and we
-              get the printed message.
-            </p>
-
-            <article>
-              <header>
-                <h3>Elif and Else</h3>
-                <p>
-                  These are keywords used if the previous conditions of an if
-                  statement were false.
-                </p>
-              </header>
-
-              <ol>
-                <li>
-                  <strong>elif:</strong>
-                  <br />
-                  Short for else if, elif is like trying another condition if
-                  the last one was false.
-                  <pre>
-                    <code>
-                      temperature = 25
-                      <br />
-                      <br />
-                      if temperature {">"} 30:
-                      <br />
-                      {'  print("It is hot outside!")'}
-                      <br />
-                      elif temperature {">"} 20:
-                      <br />
-                      {'  print("It is warm, but not too hot.")'}
-                    </code>
-                  </pre>
-                  Since<code>temperature</code>is equal to 25, the first
-                  condition would be false as it's not greater than 30. However,
-                  it is greater than 20 so the second condition would be true
-                  and the print statement would execute.
-                </li>
-
-                <br />
-
-                <li>
-                  <strong>else:</strong>
-                  <br />
-                  When none of the conditions turned out to be true, you can use
-                  an else statement. It's basically like a last resort if
-                  everything else failed.
-                  <pre>
-                    <code>
-                      temperature = 10
-                      <br />
-                      <br />
-                      if temperature {">"} 30:
-                      <br />
-                      {'  print("It is hot outside!")'}
-                      <br />
-                      elif temperature {">"} 20:
-                      <br />
-                      {'  print("It is warm, but not too hot.")'}
-                      <br />
-                      else:
-                      <br />
-                      {'  print("It is cold!")'}
-                    </code>
-                  </pre>
-                  Since<code>temperature</code>is 10, the first condition would
-                  be false. Moving on to the second condition, that would also
-                  be false and as there's no more conditions to check, it
-                  defaults to the<code>else</code>block and executes the final
-                  print statement.
-                </li>
-              </ol>
-            </article>
-          </div>
+                When none of the conditions turned out to be true, you can use
+                an else statement. It's basically like a last resort if
+                everything else failed.
+                <pre>
+                  <code>
+                    temperature = 10
+                    <br />
+                    <br />
+                    if temperature {">"} 30:
+                    <br />
+                    {'  print("It is hot outside!")'}
+                    <br />
+                    elif temperature {">"} 20:
+                    <br />
+                    {'  print("It is warm, but not too hot.")'}
+                    <br />
+                    else:
+                    <br />
+                    {'  print("It is cold!")'}
+                  </code>
+                </pre>
+                Since<code>temperature</code>is 10, the first condition would be
+                false. Moving on to the second condition, that would also be
+                false and as there's no more conditions to check, it defaults to
+                the<code>else</code>block and executes the final print
+                statement.
+              </li>
+            </ol>
+          </article>
         </SubSection>
 
         <SubSection
