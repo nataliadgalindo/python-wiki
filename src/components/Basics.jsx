@@ -521,11 +521,13 @@ function Basics() {
             </header>
 
             <div>
+              <br />
               <p>
                 A <i>parameter</i> is a variable set inside the parenthesis of
                 the function when you define it. You can have as many as you
                 want, as long as they're separated by a comma.
               </p>
+              <br />
               <p>
                 An <i>argument</i> is the value that is sent back to the
                 function when you call it, also set in the parenthesis.
@@ -579,6 +581,7 @@ function Basics() {
             </header>
 
             <ol>
+              <br />
               <li>
                 <strong>Local Scope:</strong>
                 <br />
