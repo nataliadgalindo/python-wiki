@@ -196,7 +196,7 @@ pre {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 0 1rem 2rem;
+    padding: 0 1rem 3rem;
   }
 
   .page-btn {
@@ -224,7 +224,7 @@ pre {
     padding-top: 1rem;
   }
 
-  .section-content div > article {
+  .section-content div > article:not(.compiler-article) {
     margin: 2rem 0;
   }
 
@@ -234,4 +234,16 @@ pre {
   }
 
   /* basics page */
+
+  .devenv hr {
+    margin: 1rem 0;
+  }
+
+  .subsection-header {
+    margin: 2rem 0;
+  }
+
+  .devenv .section-content div {
+    padding-top: 0;
+  }
 }

@@ -13,7 +13,7 @@ function DevEnv() {
         <h1>Development Environment</h1>
       </header>
 
-      <div className="subsection">
+      <div className="subsection devenv">
         <header className="subsection-header">
           <h2>IDE</h2>
           <p>
@@ -29,7 +29,7 @@ function DevEnv() {
           {ide.map(({ title, desc }, i) => {
             return (
               <div key={i}>
-                <article>
+                <article className="devenv-article">
                   <h3>{title}</h3>
                   <p>{desc}</p>
                 </article>
@@ -56,7 +56,7 @@ function DevEnv() {
           {compiler.map(({ step, desc }, i) => {
             return (
               <div key={i}>
-                <article>
+                <article className="compiler-article">
                   <h3>{step}</h3>
                   <p>{desc}</p>
                 </article>
