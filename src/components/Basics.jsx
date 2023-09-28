@@ -1,27 +1,41 @@
 import { Helmet } from "react-helmet"
 import { basics } from "../../data"
 import { NextPageBtn } from "./PageBtns"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+
+export function SubSection({ children, title, desc }) {
+  return (
+    <>
+      <article className="subsection">
+        <header className="subsection-header">
+          <h2>{title}</h2>
+          {desc}
+        </header>
+
+        <div className="subsection-content">{children}</div>
+      </article>
+      <hr />
+    </>
+  )
+}
+
+export function CodeBlock({ code }) {
+  const customStyles = {
+    backgroundColor: "rgba(43, 130, 196, 0.2)",
+    borderRadius: "4px",
+  }
+
+  return (
+    <SyntaxHighlighter customStyle={customStyles} language="python">
+      {code}
+    </SyntaxHighlighter>
+  )
+}
 
 function Basics() {
   const [{ types }, { funcs }] = basics
 
-  function SubSection({ children, title, desc }) {
-    return (
-      <>
-        <article className="subsection">
-          <header className="subsection-header">
-            <h2>{title}</h2>
-            {desc}
-          </header>
-
-          <div>{children}</div>
-        </article>
-        <hr />
-      </>
-    )
-  }
-
-  function TableRow({ symbol, operation }) {
+  function OperationRow({ symbol, operation }) {
     return (
       <tr>
         <td>{symbol}</td>
@@ -50,15 +64,18 @@ function Basics() {
           desc={
             <p>
               Comments are notes you can add to your code for yourself or other
-              programmers to read. They dont affect how the program runs.
+              programmers to read. They can also be used to stop Python from
+              running certain code.
             </p>
           }
         >
-          <div>
+          {/* <CodeBlock code={'print("hello world")'} />
+          <CodeBlock code={"# this is a comment"} /> */}
+
+          <div className="code-block">
             <h3>Example</h3>
-            <pre>
-              <code>#this is a comment</code>
-            </pre>
+
+            <CodeBlock code={'print("hello world")'} />
           </div>
 
           <p>
@@ -77,7 +94,7 @@ function Basics() {
             </p>
           }
         >
-          <div>
+          <div className="example-block">
             <h3>Example</h3>
             <pre>
               <code>
@@ -120,7 +137,7 @@ function Basics() {
             </p>
           }
         >
-          <div>
+          <div className="example-block">
             <h3>Example</h3>
 
             <pre>
@@ -133,7 +150,7 @@ function Basics() {
             </p>
           </div>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Index</h3>
               <p>
@@ -149,7 +166,7 @@ function Basics() {
               </p>
             </header>
 
-            <div>
+            <div className="example-block">
               <pre>
                 <code>
                   fruits = ["apple", "banana", "orange"]
@@ -163,7 +180,7 @@ function Basics() {
             </div>
           </article>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Changeable</h3>
               <p>
@@ -173,7 +190,7 @@ function Basics() {
             </header>
           </article>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Duplicates</h3>
               <p>
@@ -195,7 +212,7 @@ function Basics() {
             </p>
           }
         >
-          <div>
+          <div className="example-block">
             <h3>Example</h3>
             <pre>
               <code>
@@ -221,7 +238,7 @@ function Basics() {
             values can be any data type you want.
           </p>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Index</h3>
               <p>
@@ -234,7 +251,7 @@ function Basics() {
               </p>
             </header>
 
-            <div>
+            <div className="example-block">
               <pre>
                 <code>
                   car = {"{"}
@@ -254,7 +271,7 @@ function Basics() {
             </div>
           </article>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Changeable</h3>
               <p>
@@ -264,7 +281,7 @@ function Basics() {
             </header>
           </article>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Duplicates</h3>
               <p>
@@ -273,7 +290,7 @@ function Basics() {
               </p>
             </header>
 
-            <div>
+            <div className="example-block">
               <pre>
                 <code>
                   car = {"{"}
@@ -305,7 +322,7 @@ function Basics() {
             </p>
           }
         >
-          <div>
+          <div className="example-block">
             <h3>Example</h3>
             <pre>
               <code>
@@ -324,11 +341,14 @@ function Basics() {
               </tr>
             </thead>
             <tbody>
-              <TableRow symbol={"+"} operation={"Add"} />
-              <TableRow symbol={"-"} operation={"Subtract"} />
-              <TableRow symbol={"*"} operation={"Multiply"} />
-              <TableRow symbol={"/"} operation={"Divide"} />
-              <TableRow symbol={"**"} operation={"Power (to the power of)"} />
+              <OperationRow symbol={"+"} operation={"Add"} />
+              <OperationRow symbol={"-"} operation={"Subtract"} />
+              <OperationRow symbol={"*"} operation={"Multiply"} />
+              <OperationRow symbol={"/"} operation={"Divide"} />
+              <OperationRow
+                symbol={"**"}
+                operation={"Power (to the power of)"}
+              />
             </tbody>
           </table>
         </SubSection>
@@ -350,7 +370,7 @@ function Basics() {
                     <strong>{name}():</strong> {desc}
                   </p>
 
-                  <div>
+                  <div className="example-block">
                     <pre>
                       <code>
                         {code.map((line, j) => {
@@ -379,20 +399,21 @@ function Basics() {
             statements.
           </p>
 
-          <h3>Example</h3>
-
-          <pre>
-            <code>
-              a = 24
-              <br />
-              b = 132
-              <br />
-              <br />
-              if b {">"} a:
-              <br />
-              {'  print("b is greater than a")'}
-            </code>
-          </pre>
+          <div className="example-block">
+            <h3>Example</h3>
+            <pre>
+              <code>
+                a = 24
+                <br />
+                b = 132
+                <br />
+                <br />
+                if b {">"} a:
+                <br />
+                {'  print("b is greater than a")'}
+              </code>
+            </pre>
+          </div>
 
           <p>
             On the first line of the if statement, we check if the value of
@@ -401,7 +422,7 @@ function Basics() {
             the printed message.
           </p>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Elif and Else</h3>
               <p>
@@ -485,33 +506,37 @@ function Basics() {
             In Python, they are defined with the<code>def</code>keyword.
           </p>
 
-          <h3>Example</h3>
+          <div className="example-block">
+            <h3>Example</h3>
 
-          <pre>
-            <code>
-              def my_function():
-              <br />
-              {'  print("Hello, world! I was printed from a function")'}
-            </code>
-          </pre>
+            <pre>
+              <code>
+                def my_function():
+                <br />
+                {'  print("Hello, world! I was printed from a function")'}
+              </code>
+            </pre>
+          </div>
 
           <p>
             In order to call it and run the code within, you just use the
             function name and attach the parenthesis.
           </p>
 
-          <pre>
-            <code>
-              def my_function():
-              <br />
-              {'  print("Hello, world! I was printed from a function")'}
-              <br />
-              <br />
-              <strong>my_function()</strong>
-            </code>
-          </pre>
+          <div className="example-block">
+            <pre>
+              <code>
+                def my_function():
+                <br />
+                {'  print("Hello, world! I was printed from a function")'}
+                <br />
+                <br />
+                <strong>my_function()</strong>
+              </code>
+            </pre>
+          </div>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Arguments and Parameters</h3>
               <p>
@@ -520,19 +545,20 @@ function Basics() {
               </p>
             </header>
 
-            <div>
-              <br />
-              <p>
-                A <i>parameter</i> is a variable set inside the parenthesis of
-                the function when you define it. You can have as many as you
-                want, as long as they're separated by a comma.
-              </p>
-              <br />
-              <p>
-                An <i>argument</i> is the value that is sent back to the
-                function when you call it, also set in the parenthesis.
-              </p>
+            <br />
 
+            <p>
+              A <i>parameter</i> is a variable set inside the parenthesis of the
+              function when you define it. You can have as many as you want, as
+              long as they're separated by a comma.
+            </p>
+            <br />
+            <p>
+              An <i>argument</i> is the value that is sent back to the function
+              when you call it, also set in the parenthesis.
+            </p>
+
+            <div className="example-block">
               <pre>
                 <code>
                   def my_function(fname, lname):
@@ -545,15 +571,15 @@ function Basics() {
                   my_function("John", "Doe")
                 </code>
               </pre>
-
-              <p>
-                When the function is defined, two parameters are set,
-                <code>fname</code>and<code>lname</code>. When it's called, the
-                two corresponding arguments,<code>"John"</code>and
-                <code>"Doe"</code>, are sent back and will replace the variables
-                in the print statements.
-              </p>
             </div>
+
+            <p>
+              When the function is defined, two parameters are set,
+              <code>fname</code>and<code>lname</code>. When it's called, the two
+              corresponding arguments,<code>"John"</code>and
+              <code>"Doe"</code>, are sent back and will replace the variables
+              in the print statements.
+            </p>
           </article>
         </SubSection>
 
@@ -571,7 +597,7 @@ function Basics() {
             statements.
           </p>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>Scope</h3>
               <p>
@@ -591,13 +617,15 @@ function Basics() {
                 variable inside a function, it belongs to the local scope of
                 that function, meaning you can't use it anywhere else except
                 there.
-                <pre>
-                  <code>
-                    def my_function():
-                    <br />
-                    {"  x = 10"}
-                  </code>
-                </pre>
+                <div className="example-block">
+                  <pre>
+                    <code>
+                      def my_function():
+                      <br />
+                      {"  x = 10"}
+                    </code>
+                  </pre>
+                </div>
               </li>
               <br />
               <li>
@@ -608,24 +636,26 @@ function Basics() {
                 from anywhere in your code. When you create a variable or
                 function outside of any function or anywhere in a local scope,
                 it's in the global scope.
-                <pre>
-                  <code>
-                    x = 30 # This is in the global scope
-                    <br />
-                    <br />
-                    def my_function():
-                    <br />
-                    {"  x = 10"} # This is in the local scope of my_function
-                    <br />
-                    {"  print(x)"} # This will print the local x, which is 40
-                    <br />
-                    <br />
-                    my_function()
-                    <br />
-                    <br />
-                    print(x) # This will print the global x, which is 30
-                  </code>
-                </pre>
+                <div className="example-block">
+                  <pre>
+                    <code>
+                      x = 30 # This is in the global scope
+                      <br />
+                      <br />
+                      def my_function():
+                      <br />
+                      {"  x = 10"} # This is in the local scope of my_function
+                      <br />
+                      {"  print(x)"} # This will print the local x, which is 40
+                      <br />
+                      <br />
+                      my_function()
+                      <br />
+                      <br />
+                      print(x) # This will print the global x, which is 30
+                    </code>
+                  </pre>
+                </div>
               </li>
             </ol>
           </article>
@@ -637,7 +667,7 @@ function Basics() {
             <p>Python supports for and while loops for repetitive tasks.</p>
           }
         >
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>For Loops</h3>
               <p>
@@ -646,7 +676,7 @@ function Basics() {
               </p>
             </header>
 
-            <div>
+            <div className="example-block">
               <pre>
                 <code>
                   fruits = ["apple", "banana", "orange"]
@@ -657,24 +687,24 @@ function Basics() {
                   {"  print(f)"}
                 </code>
               </pre>
-
-              <p>
-                In for loops, you define a temporary variable to each item in
-                the iterable (in this case, a list), and run some code to it.
-                The loop will literally loop through the structure and execute
-                the specified code to every item.
-              </p>
-              <p>
-                On the first line, we declare a variable<code>fruits</code>to a
-                list of fruits. When we begin writing the for loop, we set the
-                variable<code>f</code>that'll temporarily assign itself to the
-                value of the current item until the code to it executes, the
-                item gets printed, and moves on the next item.
-              </p>
             </div>
+
+            <p>
+              In for loops, you define a temporary variable to each item in the
+              iterable (in this case, a list), and run some code to it. The loop
+              will literally loop through the structure and execute the
+              specified code to every item.
+            </p>
+            <p>
+              On the first line, we declare a variable<code>fruits</code>to a
+              list of fruits. When we begin writing the for loop, we set the
+              variable<code>f</code>that'll temporarily assign itself to the
+              value of the current item until the code to it executes, the item
+              gets printed, and moves on the next item.
+            </p>
           </article>
 
-          <article>
+          <article className="sub-subsection">
             <header>
               <h3>While Loops</h3>
               <p>
@@ -683,7 +713,7 @@ function Basics() {
               </p>
             </header>
 
-            <div>
+            <div className="example-block">
               <pre>
                 <code>
                   i = 1
@@ -696,14 +726,14 @@ function Basics() {
                   {"  i += 1"}
                 </code>
               </pre>
-
-              <p>Once the condition becomes false, the loop will end.</p>
-              <p>
-                If we didn't add the last line <code>i += 1</code>, which
-                increments it (increases the value), the loop would continue
-                forever and cause the program to crash.
-              </p>
             </div>
+
+            <p>Once the condition becomes false, the loop will end.</p>
+            <p>
+              If we didn't add the last line <code>i += 1</code>, which
+              increments it (increases the value), the loop would continue
+              forever and cause the program to crash.
+            </p>
           </article>
         </SubSection>
       </div>

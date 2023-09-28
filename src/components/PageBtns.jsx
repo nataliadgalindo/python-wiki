@@ -11,7 +11,8 @@ export function NextPageBtn({ name, page }) {
         <p>NEXT</p>
         <span>{name}</span>
       </div>
-      <p>{">"}</p>
+
+      <img src="/assets/images/arrow-right.svg" alt="" />
     </NavLink>
   )
 }
@@ -19,7 +20,8 @@ export function NextPageBtn({ name, page }) {
 export function LastPageBtn({ name, page }) {
   return (
     <NavLink to={page} onClick={scrollToTop} className="last-page-btn page-btn">
-      <p>{"<"}</p>
+      <img src="/assets/images/arrow-left.svg" alt="" />
+
       <div>
         <p>PREVIOUS</p>
         <span>{name}</span>

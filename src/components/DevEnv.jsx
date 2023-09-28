@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet"
 import { ide, compiler } from "../../data"
 import { NextPageBtn, LastPageBtn } from "./PageBtns"
+import { SubSection } from "./Basics"
 
 function DevEnv() {
   return (
@@ -12,6 +13,8 @@ function DevEnv() {
       <header id="section-header">
         <h1>Development Environment</h1>
       </header>
+
+      <SubSection></SubSection>
 
       <div className="subsection devenv">
         <header className="subsection-header">
@@ -33,7 +36,6 @@ function DevEnv() {
                   <h3>{title}</h3>
                   <p>{desc}</p>
                 </article>
-
                 <hr />
               </div>
             )
