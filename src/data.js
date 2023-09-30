@@ -1,3 +1,30 @@
+export const sideNav = [
+  {
+    route: "/learn",
+    title: "The Basics",
+  },
+  {
+    route: "devenv",
+    title: "Development Environment",
+  },
+  {
+    route: "errors",
+    title: "Common Errors",
+  },
+  {
+    route: "debugging",
+    title: "Debugging",
+  },
+  {
+    route: "libraries",
+    title: "Python Libraries",
+  },
+  {
+    route: "styles",
+    title: "Programming Styles",
+  },
+]
+
 export const basics = [
   {
     types: [
