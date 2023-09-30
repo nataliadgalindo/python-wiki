@@ -49,20 +49,12 @@ svg {
   opacity: 0.9;
 }
 
-/* code snippets */
-
-code > * {
-  font-family: Consolas, monospace;
+hr {
+  margin: 3rem 0;
 }
 
-/* inline code */
-
-p code {
-  background-color: var(--grayish-blue);
-  color: var(--main-blue);
-  padding: 0.25rem 0.5rem;
-  margin: 0 6px;
-  border-radius: 4px;
+p {
+  font-size: 1.1rem;
 }
 
 /* @media screen and (min-width: 1024px) {
@@ -70,6 +62,31 @@ p code {
     padding: 2.5rem 1rem;
   }
 } */
+
+/* top nav */
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--dark-blue);
+  border-bottom: 1px solid rgb(37, 48, 65);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.top-links a {
+  margin: 0 1rem;
+}
+
+.top-links a:hover {
+  border-bottom: 2px solid var(--main-blue);
+}
 
 /* home page */
 
@@ -108,70 +125,60 @@ p code {
   padding: 0.75rem 1.25rem;
 }
 
-/* top nav */
-
-.top-nav {
-  position: sticky;
-  top: 0;
-  background-color: var(--dark-blue);
-  border-bottom: 1px solid rgb(37, 48, 65);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo img {
-  width: 40px;
-}
-
-.side-links a {
-  margin: 0 1rem;
-}
-
-.side-links a:hover {
-  border-bottom: 2px solid var(--main-blue);
-}
-
-/* main content */
-
-main {
-  padding: 2.5rem 3rem;
-}
-
 /* grid container */
 
 .grid-container {
   display: grid;
-  grid-template-columns: 260px auto;
+  grid-template-columns: 300px auto;
 }
 
 /* side nav */
 
 .side-nav {
   position: fixed;
-  /* left: 0; */
+  width: 300px;
+  height: 100%;
   padding: 2rem 1rem 0 0;
   border-right: 3px solid var(--grayish-blue);
-  height: 100%;
 }
 
 .side-nav a {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 1rem;
-  /* padding-left: 2rem; */
-  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
+  padding-right: 0.75rem;
   margin: 0.5rem 0;
+  border-radius: 0 12px 12px 0;
 }
 
 .side-nav a:hover {
   background-color: var(--grayish-blue);
-  border-radius: 0 12px 12px 0;
-  color: var(--main-blue);
-  /* font-weight: 700; */
 }
 
-/* subsections / global styles */
+.highlight-link {
+  background-color: var(--grayish-blue);
+  color: var(--main-blue);
+  font-weight: 700;
+}
+
+.side-nav img {
+  opacity: 0.8;
+}
+
+.side-nav img {
+  width: 26px;
+}
+
+/* main content */
+
+main {
+  padding: 2.5rem 3rem;
+  grid-column: 2 / span 1;
+}
+
+/* sections */
 
 #section-header {
   margin-bottom: 3rem;
@@ -182,16 +189,28 @@ main {
   margin-bottom: 0.5rem;
 }
 
-hr {
-  margin: 3rem 0;
-}
-
-p {
-  font-size: 1.1rem;
-}
+/* subsections */
 
 .subsection-header h2 {
   margin: 0.5rem 0;
+}
+
+/* sub-subsections */
+
+/* code */
+
+code > * {
+  font-family: Consolas, monospace;
+}
+
+/* inline code */
+
+p code {
+  background-color: var(--grayish-blue);
+  color: var(--main-blue);
+  padding: 0.25rem 0.5rem;
+  margin: 0 6px;
+  border-radius: 4px;
 }
 
 /* page buttons */
@@ -210,15 +229,7 @@ p {
   column-gap: 1rem;
   border-radius: 12px;
   padding: 1.5rem 1.75rem;
-}
-
-/* .page-btn svg path {
-  fill: #fff;
-} */
-
-.page-btn svg {
-  width: 32px;
-  height: 32px;
+  min-width: 268px;
 }
 
 .page-btn:hover {
@@ -226,38 +237,33 @@ p {
   color: var(--main-blue);
 }
 
+.page-btn span {
+  font-size: 18px;
+  color: var(--main-blue);
+}
+
+.page-btn span:hover {
+  text-decoration: underline;
+}
+
+.page-btn img {
+  opacity: 0.8;
+}
+
 .next-page-btn {
   margin-left: auto;
+  justify-content: end;
+}
+
+.next-page-btn p {
+  text-align: right;
 }
 
 .last-page-btn {
   margin-right: auto;
+  justify-content: start;
 }
 
-/* .section-content div {
-    padding-top: 1rem;
-  }
-
-  .section-content div > article:not(.compiler-article) {
-    margin: 2rem 0;
-  }
-
-  .section-content h3 {
-    font-size: 1.25rem;
-    margin: 0.5rem 0;
-  } */
-
-/* basics page */
-
-/* .devenv hr {
-    margin: 1rem 0;
-  }
-
-  .subsection-header {
-    margin: 2rem 0;
-  }
-
-  .section-content div {
-    padding-top: 0;
-  } */
-/* } */
+.last-page-btn p {
+  text-align: left;
+}
