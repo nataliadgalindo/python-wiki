@@ -1,37 +1,34 @@
 import { NavLink, Outlet } from "react-router-dom"
+import { useState } from "react"
+import { sideNav } from "../data.js"
 
 function LearnLayout() {
+  const [path, setPath] = useState(0)
+
   function scrollToTop() {
     window.scrollTo(0, 0)
   }
 
   return (
     <div className="grid-container">
-      <aside>
-        <nav className="side-nav">
-          <NavLink to="/learn" onClick={scrollToTop}>
-            The Basics
-          </NavLink>
-
-          <NavLink to="devenv" onClick={scrollToTop}>
-            Development Environment
-          </NavLink>
-
-          <NavLink to="errors" onClick={scrollToTop}>
-            Common Errors
-          </NavLink>
-
-          <NavLink to="debugging" onClick={scrollToTop}>
-            Debugging
-          </NavLink>
-
-          <NavLink to="libraries" onClick={scrollToTop}>
-            Python Libraries
-          </NavLink>
-
-          <NavLink to="styles" onClick={scrollToTop}>
-            Programming Styles
-          </NavLink>
+      <aside className="side-nav">
+        <nav>
+          {sideNav.map(({ route, title }, i) => {
+            return (
+              <NavLink
+                key={i}
+                to={route}
+                onClick={() => {
+                  setPath(i)
+                  scrollToTop()
+                }}
+                className={path === i ? "highlight-link" : ""}
+              >
+                {title}
+                <img src="/assets/images/arrow-right.svg" alt="" />
+              </NavLink>
+            )
+          })}
         </nav>
       </aside>
 

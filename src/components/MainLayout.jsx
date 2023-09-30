@@ -8,7 +8,7 @@ function MainLayout() {
           <img src="/logo.png" alt="" />
         </NavLink>
 
-        <div className="side-links">
+        <div className="top-links">
           <NavLink to="learn">Learn</NavLink>
           <a href="https://docs.python.org/3/" target="_blank">
             Docs
