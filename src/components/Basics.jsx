@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet"
-import { basics } from "../../data"
+import { basics } from "../data"
 import { NextPageBtn } from "./PageBtns"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 
@@ -21,7 +21,7 @@ export function SubSection({ children, title, desc }) {
 
 export function CodeBlock({ code }) {
   const customStyles = {
-    backgroundColor: "rgba(43, 130, 196, 0.2)",
+    backgroundColor: "rgba(43, 130, 196, 0.1)",
     borderRadius: "4px",
   }
 

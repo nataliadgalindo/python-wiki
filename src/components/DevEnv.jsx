@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet"
-import { ide, compiler } from "../../data"
+import { ide, compiler } from "../data"
 import { NextPageBtn, LastPageBtn } from "./PageBtns"
 import { SubSection } from "./Basics"
 

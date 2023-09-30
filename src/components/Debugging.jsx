@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet"
-import { debugging } from "../../data"
+import { debugging } from "../data"
 import { NextPageBtn, LastPageBtn } from "./PageBtns"
 
 function Debugging() {

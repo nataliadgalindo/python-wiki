@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet"
-import { styles } from "../../data"
+import { styles } from "../data"
 import { LastPageBtn } from "./PageBtns"
 
 function Styles() {
