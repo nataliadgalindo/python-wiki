@@ -1,5 +1,4 @@
-/* balsamiq-sans-regular - latin */
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: "Balsamiq Sans";
   font-style: normal;
@@ -8,28 +7,45 @@
     format("woff2");
 }
 
-/* balsamiq-sans-700 - latin */
 @font-face {
   font-display: swap;
   font-family: "Balsamiq Sans";
   font-style: normal;
   font-weight: 700;
   src: url("/assets/fonts/balsamiq-sans-v14-latin-700.woff2") format("woff2");
+} */
+
+/* ubuntu-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/ubuntu-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ubuntu-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/ubuntu-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* global */
 
 :root {
-  --off-white: rgba(255, 255, 255, 0.9);
+  /* --off-white: rgba(255, 255, 255, 0.9); */
+  --off-white: #ddd;
   --dark-blue: rgb(28, 36, 48);
-  --main-blue: #268cda;
+  --main-blue: #32a6ff;
   --grayish-blue: rgba(43, 130, 196, 0.2);
 }
 
 *,
 ::after,
 ::before {
-  font-family: "Balsamiq Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
   color: var(--off-white);
   margin: 0;
@@ -45,23 +61,14 @@ a {
   text-decoration: none;
 }
 
-svg {
-  opacity: 0.9;
-}
-
-hr {
-  margin: 3rem 0;
+p,
+li {
+  line-height: 1.6;
 }
 
 p {
   font-size: 1.1rem;
 }
-
-/* @media screen and (min-width: 1024px) {
-  main {
-    padding: 2.5rem 1rem;
-  }
-} */
 
 /* top nav */
 
@@ -142,12 +149,20 @@ p {
   border-right: 3px solid var(--grayish-blue);
 }
 
+.side-nav button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
 .side-nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   padding-right: 0.75rem;
   margin: 0.5rem 0;
   border-radius: 0 12px 12px 0;
@@ -165,9 +180,6 @@ p {
 
 .side-nav img {
   opacity: 0.8;
-}
-
-.side-nav img {
   width: 26px;
 }
 
@@ -175,29 +187,88 @@ p {
 
 main {
   padding: 2.5rem 3rem;
+  padding-right: 4rem;
   grid-column: 2 / span 1;
 }
 
 /* sections */
 
 #section-header {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #section-header h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#section-header p {
+  font-size: 1.5rem;
 }
 
 /* subsections */
 
+.subsection {
+  /* margin: 3rem 0; */
+  padding: 2rem 0;
+}
+
+.subsection-header {
+  margin-bottom: 3rem;
+}
+
 .subsection-header h2 {
-  margin: 0.5rem 0;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subsection-header p {
+  font-size: 1.25rem;
+}
+
+.subsection-content {
+  margin: 2rem 0 1rem;
 }
 
 /* sub-subsections */
 
+/* .sub-subsection {
+  padding: 0.5rem 0;
+} */
+
+.sub-subsection-header {
+  margin: 2rem 0;
+}
+
+.sub-subsection-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 /* code */
+
+.example-block {
+  border-radius: 4px;
+  background-color: rgba(43, 130, 196, 0.15);
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.example-block h3 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+li > .example-block {
+  margin-top: 1rem;
+}
+
+.code-block {
+  padding: 0.5rem 1rem;
+  background-color: var(--dark-blue);
+  border-radius: 4px;
+  margin: 1rem 0;
+}
 
 code > * {
   font-family: Consolas, monospace;
@@ -208,7 +279,7 @@ code > * {
 p code {
   background-color: var(--grayish-blue);
   color: var(--main-blue);
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   margin: 0 6px;
   border-radius: 4px;
 }
@@ -220,7 +291,7 @@ p code {
   align-items: center;
   width: 100%;
   justify-content: flex-start;
-  margin: 1rem 0;
+  margin-top: 2rem;
 }
 
 .page-btn {
@@ -232,18 +303,9 @@ p code {
   min-width: 268px;
 }
 
-.page-btn:hover {
-  background-color: var(--grayish-blue);
-  color: var(--main-blue);
-}
-
 .page-btn span {
   font-size: 18px;
   color: var(--main-blue);
-}
-
-.page-btn span:hover {
-  text-decoration: underline;
 }
 
 .page-btn img {
@@ -266,4 +328,13 @@ p code {
 
 .last-page-btn p {
   text-align: left;
+}
+
+.page-btn:hover {
+  background-color: var(--grayish-blue);
+  color: var(--main-blue);
+}
+
+.page-btn span:hover {
+  text-decoration: underline;
 }
