@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import { errors } from "../data"
-import { NextPageBtn, LastPageBtn } from "./PageBtns"
+import { SubSection, SSubSection } from "./Sections"
 
 function Errors() {
   return (
@@ -9,31 +9,30 @@ function Errors() {
         <title>Common Errors</title>
       </Helmet>
 
-      <header id="section-header">
-        <h1>Common Errors</h1>
-      </header>
+      <>
+        <header id="section-header">
+          <h1>Common Errors</h1>
+          <p>
+            In this section, we're going to take a closer look at some of the
+            most common Python errors that programmers encounter.
+          </p>
+        </header>
+        <hr />
+      </>
 
       <div className="section-content">
         {errors.map(({ err, desc }, i) => {
           return (
-            <div key={i}>
-              <article>
-                <header>
-                  <h2>{err} Error</h2>
-                  <p>
-                    {err} {desc}
-                  </p>
-                </header>
-              </article>
-              <hr />
-            </div>
+            <SubSection
+              title={`${err} Error`}
+              desc={
+                <p>
+                  {err} {desc}
+                </p>
+              }
+            ></SubSection>
           )
         })}
-      </div>
-
-      <div className="page-btn-container">
-        <LastPageBtn name={"Development Environment"} page={"/learn/devenv"} />
-        <NextPageBtn name={"Debugging"} page={"/learn/debugging"} />
       </div>
     </>
   )

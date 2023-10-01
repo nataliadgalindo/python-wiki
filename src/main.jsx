@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./index.css"
-
+import { StrictMode } from "react"
 import MainLayout from "./components/MainLayout"
 import LearnLayout from "./components/LearnLayout"
 import App from "./components/App.jsx"
@@ -13,6 +13,7 @@ import Libraries from "./components/Libraries.jsx"
 import Styles from "./components/Styles.jsx"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  // <StrictMode>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<MainLayout />}>
@@ -28,4 +29,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </Route>
     </Routes>
   </BrowserRouter>
+  // </StrictMode>
 )

@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import { styles } from "../data"
-import { LastPageBtn } from "./PageBtns"
+import { SubSection, SSubSection } from "./Sections"
 
 function Styles() {
   return (
@@ -16,21 +16,18 @@ function Styles() {
       <div className="section-content">
         {styles.map(({ name, desc }, i) => {
           return (
-            <div key={i}>
-              <article>
-                <header>
-                  <h2>{name}</h2>
-                  <p>{desc}</p>
-                </header>
-              </article>
-              <hr />
-            </div>
+            <SubSection key={i} title={name} desc={<p>{desc}</p>}></SubSection>
+            // <div key={i}>
+            //   <article>
+            //     <header>
+            //       <h2>{name}</h2>
+            //       <p>{desc}</p>
+            //     </header>
+            //   </article>
+            //   <hr />
+            // </div>
           )
         })}
-      </div>
-
-      <div className="page-btn-container">
-        <LastPageBtn name={"Python Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )

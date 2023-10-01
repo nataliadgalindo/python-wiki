@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import { debugging } from "../data"
-import { NextPageBtn, LastPageBtn } from "./PageBtns"
+import { SubSection, SSubSection } from "./Sections"
 
 function Debugging() {
   return (
@@ -11,26 +11,29 @@ function Debugging() {
 
       <header id="section-header">
         <h1>Debugging</h1>
+        <p>
+          Debugging is a critical skill that separates the novices from the
+          experts. It's the art of finding and fixing errors, ensuring that your
+          code runs smoothly and produces the desired results.
+        </p>
       </header>
 
       <div className="section-content">
         {debugging.map(({ title, desc }, i) => {
           return (
-            <div key={i}>
-              <article>
+            <SubSection key={i} title={title} desc={<p>{desc}</p>}></SubSection>
+
+            // <div key={i}>
+
+            /* <article>
                 <h3>{title}</h3>
                 <p>{desc}</p>
-              </article>
+              </article> */
 
-              <hr />
-            </div>
+            // <hr />
+            // </div>
           )
         })}
-      </div>
-
-      <div className="page-btn-container">
-        <LastPageBtn name={"Common Errors"} page={"/learn/errors"} />
-        <NextPageBtn name={"Python Libraries"} page={"/learn/libraries"} />
       </div>
     </>
   )
