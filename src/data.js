@@ -58,12 +58,12 @@ export const basics = [
         code: ['text = "Python"', "length = len(text) # length is 6"],
       },
       {
-        name: "int",
+        name: "int()/float",
         desc: "Functions for converting between different data types (integer, floating-point, and string).",
         code: [
           'num_str = "42"',
-          "num_int = int(num_str) # Convert to integer",
-          "num_float = float(num_str) # Convert to floating-point",
+          "num_int = int(num_str) # Convert to integer -> 42",
+          "num_float = float(num_str) # Convert to floating-point -> 42.0",
         ],
       },
       {
