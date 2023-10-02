@@ -1,11 +1,8 @@
 import { Helmet } from "react-helmet"
-import { basics } from "../data"
+import { funcs } from "../data"
 import { SubSection, SSubSection, CodeBlock } from "./Sections"
 
-
 function Basics() {
-  const [{ types }, { funcs }] = basics
-
   function OperationRow({ symbol, operation }) {
     return (
       <tr>
@@ -169,16 +166,6 @@ function Basics() {
             </>
           }
         >
-          {/* <ul>
-            {types.map(({ name, desc }, i) => {
-              return (
-                <li key={i}>
-                  {name}: {desc}
-                </li>
-              )
-            })}
-          </ul> */}
-
           <div className="example-block">
             <div className="code-block">
               <CodeBlock

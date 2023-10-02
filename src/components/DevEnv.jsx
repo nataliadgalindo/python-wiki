@@ -35,7 +35,7 @@ function DevEnv() {
           }
         >
           <ul>
-            {ide.map(({ title, desc, img }, i) => {
+            {ide.map(({ title, desc }, i) => {
               return (
                 <div key={i}>
                   <li>
