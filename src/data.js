@@ -30,14 +30,11 @@ export const basics = [
     types: [
       {
         name: "Strings",
-        desc:
-          "Text enclosed in single or double quotes like " +
-          '"Hello"' +
-          " or 'Python'.",
+        desc: " like " + '"Hello"' + " or 'Python'.",
       },
-      { name: "Integers", desc: "Whole numbers like 1, 2, -3." },
-      { name: "Floats", desc: "Numbers with decimal points like 3.14, -0.5." },
-      { name: "Boolean", desc: "Represents either True or False." },
+      { name: "Integers", desc: " like 1, 2, -3." },
+      { name: "Floats", desc: " like 3.14, -0.5." },
+      { name: "Boolean", desc: "." },
     ],
   },
   {
@@ -69,7 +66,7 @@ export const basics = [
       {
         name: "type",
         desc: "Returns the data type of an object.",
-        code: ["x = 42", "print(type(x))  # <class 'int'>"],
+        code: ["x = 42", "print(type(x))  # <class 'int'> (integer)"],
       },
       {
         name: "range",
@@ -111,26 +108,36 @@ export const debugging = [
   {
     title: "Identifying and Fixing Errors",
     desc: "The primary purpose of debugging is to find and correct errors or bugs in your code. These errors can prevent your program from working correctly or cause it to produce unexpected results. Debugging allows you to pinpoint the source of these issues and apply fixes.",
+    img: "/assets/images/identify.png",
   },
   {
     title: "Ensuring Correct Functionality",
     desc: "Debugging ensures that your code performs as intended. By thoroughly testing and debugging your code, you can have confidence that your software behaves correctly under different scenarios and edge cases.",
+    img: "/assets/images/innovation.png",
+    reverse: true,
   },
   {
     title: "Saving Time and Resources",
     desc: "Debugging early in the development process can save a substantial amount of time and resources in the long run. Identifying and addressing issues as they arise is more efficient than waiting until the end of a project, when debugging can become more challenging and time-consuming.",
+    img: "/assets/images/hourglass.png",
   },
   {
     title: "Enhancing Code Quality",
     desc: "Debugging is an integral part of code quality assurance. Well-debugged code is more reliable and easier to maintain. It also leads to a better user experience, as it reduces the likelihood of crashes or unexpected behavior.",
+    img: "/assets/images/quality.png",
+    reverse: true,
   },
+
   {
     title: "Learning and Skill Development",
     desc: "Debugging is an opportunity to learn and improve your programming skills. It requires analytical thinking, problem-solving, and familiarity with the programming language and tools. Over time, debugging helps you become a more proficient developer.",
+    img: "/assets/images/learning.png",
   },
   {
     title: "Security",
     desc: "Debugging can uncover security vulnerabilities in your code. Identifying and addressing these vulnerabilities before they are exploited by malicious actors is essential for the security of your application and user data.",
+    img: "/assets/images/cyber-security.png",
+    reverse: true,
   },
 ]
 
@@ -176,67 +183,70 @@ export const compiler = [
   },
 ]
 
-export const errors = [
-  {
-    err: "Syntax",
-    desc: "errors occur when you write code that doesnt follow the rules of the programming language. These errors prevent your code from running at all.",
-  },
-  {
-    err: "Runtime",
-    desc: "errors occur when your code runs but encounters a problem while executing, causing it to crash.",
-  },
-  {
-    err: "Index",
-    desc: "errors occur when you try to access an element in a data structure (like a list or string) using an index that is out of bounds.",
-  },
-  {
-    err: "Name",
-    desc: "errors happen when you try to use a variable or function that hasnt been defined or is out of scope.",
-  },
-  {
-    err: "Type",
-    desc: "errors occur when you try to perform operations on data of incompatible types.",
-  },
-]
-
-export const libraries = [
-  {
-    name: "math",
-    desc: "library provides mathematical functions and constants.",
-  },
-  {
-    name: "random",
-    desc: "library allows you to work with random numbers.",
-  },
-  {
-    name: "datetime",
-    desc: "library helps with date and time manipulation.",
-  },
-  {
-    name: "pandas",
-    desc: "library provides data structures and data analysis tools, mainly for working with tabular data.",
-  },
-  {
-    name: "matplotlib",
-    desc: "library is used for creating data visualizations, such as graphs and charts.",
-  },
-]
-
 export const styles = [
   {
     name: "Imperative Programming",
     desc: "A style where you write code that explicitly describes the steps the computer should take to achieve a particular task. It focuses on how to perform actions.",
+    //   code: def sum_even_numbers(numbers):
+    //   total = 0
+    //   for num in numbers:
+    //       if num % 2 == 0:
+    //           total += num
+    //   return total
+
+    // numbers = [1, 2, 3, 4, 5, 6]
+    // result = sum_even_numbers(numbers)
+    // print("Imperative result:", result)
+    // ,
   },
   {
     name: "Procedural Programming",
     desc: "A subset of imperative programming. It involves organizing code into reusable procedures or functions, which helps in code modularity and maintainability.",
+    //     def sum_even_numbers(numbers):
+    //     total = 0
+    //     for num in numbers:
+    //         if num % 2 == 0:
+    //             total += num
+    //     return total
+
+    // def main():
+    //     numbers = [1, 2, 3, 4, 5, 6]
+    //     result = sum_even_numbers(numbers)
+    //     print("Procedural result:", result)
+
+    // main()
   },
   {
     name: "Object-Oriented Programming",
     desc: "(OOP) is a programming paradigm that focuses on modeling the real world using objects. Objects have attributes (data) and methods (functions) that operate on the data.",
+    //     class NumberList:
+    //     def __init__(self, numbers):
+    //         self.numbers = numbers
+
+    //     def sum_even_numbers(self):
+    //         total = 0
+    //         for num in self.numbers:
+    //             if num % 2 == 0:
+    //                 total += num
+    //         return total
+
+    // numbers = [1, 2, 3, 4, 5, 6]
+    // num_list = NumberList(numbers)
+    // result = num_list.sum_even_numbers()
+    // print("OOP result:", result)
   },
   {
     name: "Functional Programming",
     desc: "Emphasizes immutability, pure functions, and the use of higher-order functions like map, reduce, and filter. It treats computation as the evaluation of mathematical functions.",
+    //     def is_even(num):
+    //     return num % 2 == 0
+
+    // def sum_even_numbers(numbers):
+    //     even_numbers = filter(is_even, numbers)
+    //     return sum(even_numbers)
+
+    // numbers = [1, 2, 3, 4, 5, 6]
+    // result = sum_even_numbers(numbers)
+    // print("Functional result:", result)
   },
 ]
