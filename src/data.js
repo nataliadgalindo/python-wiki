@@ -25,81 +25,66 @@ export const sideNav = [
   },
 ]
 
-export const basics = [
+export const funcs = [
   {
-    types: [
-      {
-        name: "Strings",
-        desc: " like " + '"Hello"' + " or 'Python'.",
-      },
-      { name: "Integers", desc: " like 1, 2, -3." },
-      { name: "Floats", desc: " like 3.14, -0.5." },
-      { name: "Boolean", desc: "." },
+    name: "print",
+    desc: "Used to display text or values on the screen.",
+    code: ['print("Hello, World!")'],
+  },
+  {
+    name: "input",
+    desc: "Used to get user input from the console. It waits for the user to enter something and returns it as a string.",
+    code: ['name = input("Enter your name: ")'],
+  },
+  {
+    name: "len",
+    desc: "Returns the length (number of elements) of a variable, such as a string, list, or dictionary.",
+    code: ['text = "Python"', "length = len(text) # length is 6"],
+  },
+  {
+    name: "int()/float",
+    desc: "Functions for converting between different data types (integer, floating-point, and string).",
+    code: [
+      'num_str = "42"',
+      "num_int = int(num_str) # Convert to integer -> 42",
+      "num_float = float(num_str) # Convert to floating-point -> 42.0",
     ],
   },
   {
-    funcs: [
-      {
-        name: "print",
-        desc: "Used to display text or values on the screen.",
-        code: ['print("Hello, World!")'],
-      },
-      {
-        name: "input",
-        desc: "Used to get user input from the console. It waits for the user to enter something and returns it as a string.",
-        code: ['name = input("Enter your name: ")'],
-      },
-      {
-        name: "len",
-        desc: "Returns the length (number of elements) of a variable, such as a string, list, or dictionary.",
-        code: ['text = "Python"', "length = len(text) # length is 6"],
-      },
-      {
-        name: "int()/float",
-        desc: "Functions for converting between different data types (integer, floating-point, and string).",
-        code: [
-          'num_str = "42"',
-          "num_int = int(num_str) # Convert to integer -> 42",
-          "num_float = float(num_str) # Convert to floating-point -> 42.0",
-        ],
-      },
-      {
-        name: "type",
-        desc: "Returns the data type of an object.",
-        code: ["x = 42", "print(type(x))  # <class 'int'> (integer)"],
-      },
-      {
-        name: "range",
-        desc: "Generates a sequence of numbers.",
-        code: ["numbers = range(1, 6) # Generates 1, 2, 3, 4, 5"],
-      },
-      {
-        name: "max()/min",
-        desc: "Returns the maximum or minimum value in an iterable (e.g. a list).",
-        code: [
-          "numbers = [5, 2, 9, 1, 8]",
-          "max_value = max(numbers)  # 9",
-          "min_value = min(numbers)  # 1",
-        ],
-      },
-      {
-        name: "sum",
-        desc: "Calculates the sum of all elements in an iterable.",
-        code: ["numbers = [1, 2, 3, 4, 5]", "total = sum(numbers) # 15"],
-      },
-      {
-        name: "round",
-        desc: "Rounds a floating-point number to the nearest integer.",
-        code: ["pi = 3.14159", "rounded_pi = round(pi) # 3"],
-      },
-      {
-        name: "sorted",
-        desc: "Returns a sorted version of a list.",
-        code: [
-          "unsorted_list = [3, 1, 2, 5, 4]",
-          "sorted_list = sorted(unsorted_list) # [1, 2, 3, 4, 5]",
-        ],
-      },
+    name: "type",
+    desc: "Returns the data type of an object.",
+    code: ["x = 42", "print(type(x))  # <class 'int'> (integer)"],
+  },
+  {
+    name: "range",
+    desc: "Generates a sequence of numbers.",
+    code: ["numbers = range(1, 6) # Generates 1, 2, 3, 4, 5"],
+  },
+  {
+    name: "max()/min",
+    desc: "Returns the maximum or minimum value in an iterable (e.g. a list).",
+    code: [
+      "numbers = [5, 2, 9, 1, 8]",
+      "max_value = max(numbers)  # 9",
+      "min_value = min(numbers)  # 1",
+    ],
+  },
+  {
+    name: "sum",
+    desc: "Calculates the sum of all elements in an iterable.",
+    code: ["numbers = [1, 2, 3, 4, 5]", "total = sum(numbers) # 15"],
+  },
+  {
+    name: "round",
+    desc: "Rounds a floating-point number to the nearest integer.",
+    code: ["pi = 3.14159", "rounded_pi = round(pi) # 3"],
+  },
+  {
+    name: "sorted",
+    desc: "Returns a sorted version of a list.",
+    code: [
+      "unsorted_list = [3, 1, 2, 5, 4]",
+      "sorted_list = sorted(unsorted_list) # [1, 2, 3, 4, 5]",
     ],
   },
 ]
@@ -145,22 +130,18 @@ export const ide = [
   {
     title: "Code Editor",
     desc: "An IDE includes a code editor with features like syntax highlighting, auto-completion, and code navigation.",
-    img: "/assets/images/code.png",
   },
   {
     title: "Debugger",
     desc: "IDEs typically have a built-in debugger for finding and fixing code errors.",
-    img: "/assets/images/debug.png",
   },
   {
     title: "Build and Compilation Tools",
     desc: "IDEs often come with tools for building and compiling code, making it easy to create executable programs.",
-    img: "/assets/images/execute.png",
   },
   {
     title: "Language and Framework Support",
     desc: "IDEs are typically designed for specific programming languages or frameworks, and they may offer advanced features tailored to those technologies.",
-    img: "/assets/images/python.png",
   },
 ]
 
