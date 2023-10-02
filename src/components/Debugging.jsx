@@ -19,9 +19,16 @@ function Debugging() {
       </header>
 
       <div className="section-content">
-        {debugging.map(({ title, desc }, i) => {
+        {debugging.map(({ title, desc, img, reverse }, i) => {
           return (
-            <SubSection key={i} title={title} desc={<p>{desc}</p>}></SubSection>
+            <SubSection key={i} title={title}>
+              <div
+                className={`img-subtitle ${reverse && "reverse-img-subtitle"}`}
+              >
+                <p>{desc}</p>
+                <img src={img} alt={title} />
+              </div>
+            </SubSection>
 
             // <div key={i}>
 

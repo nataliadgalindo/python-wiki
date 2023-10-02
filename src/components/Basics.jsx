@@ -1,26 +1,7 @@
 import { Helmet } from "react-helmet"
 import { basics } from "../data"
-import { SubSection, SSubSection } from "./Sections"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism"
+import { SubSection, SSubSection, CodeBlock } from "./Sections"
 
-export function CodeBlock({ code }) {
-  const customStyles = {
-    backgroundColor: "rgb(28, 36, 48)",
-    margin: "0",
-    padding: "0",
-  }
-
-  return (
-    <SyntaxHighlighter
-      style={tomorrow}
-      customStyle={customStyles}
-      language="python"
-    >
-      {code}
-    </SyntaxHighlighter>
-  )
-}
 
 function Basics() {
   const [{ types }, { funcs }] = basics
@@ -176,15 +157,19 @@ function Basics() {
         <SubSection
           title={"Data Types"}
           desc={
-            <p>
-              There are many different data types in programming and they can
-              all do different things.
-            </p>
+            <>
+              <p>
+                There are many different data types in programming and they can
+                all do different things.
+              </p>
+              <br />
+              <p>
+                Here are the most basic, important data types you should know:
+              </p>
+            </>
           }
         >
-          <p>Here are the most basic, important data types you should know:</p>
-
-          <ul>
+          {/* <ul>
             {types.map(({ name, desc }, i) => {
               return (
                 <li key={i}>
@@ -192,7 +177,31 @@ function Basics() {
                 </li>
               )
             })}
-          </ul>
+          </ul> */}
+
+          <div className="example-block">
+            <div className="code-block">
+              <CodeBlock
+                code={"#strings -> text enclosed in single or double quotes"}
+              />
+              <CodeBlock code={'fname = "John"'} />
+              <CodeBlock code={'lname = "Doe"'} />
+              <br />
+              <CodeBlock code={"#integers -> whole numbers"} />
+              <CodeBlock code={"hand_bones = 27"} />
+              <CodeBlock code={"eyes = 2"} />
+              <br />
+              <CodeBlock code={"#floats -> numbers with decimal points"} />
+              <CodeBlock code={"pi = 3.14159"} />
+              <CodeBlock code={"half = 0.5"} />
+              <br />
+              <CodeBlock
+                code={"#booleans -> represents either True or False"}
+              />
+              <CodeBlock code={"x = True"} />
+              <CodeBlock code={"y = False"} />
+            </div>
+          </div>
         </SubSection>
 
         <SubSection
@@ -243,9 +252,11 @@ function Basics() {
               <h3>Example</h3>
               <div className="code-block">
                 <CodeBlock code={'fruits = ["apple", "banana", "orange"]'} />
-                <CodeBlock code={"print(fruits[1])"} />
+                <CodeBlock code={"a_fruit = fruits[1]"} />
                 <CodeBlock
-                  code={'# this will print "banana" since indexes start at 0.'}
+                  code={
+                    '# a_fruit would equal "banana" since indexes start at 0.'
+                  }
                 />
               </div>
             </div>
@@ -332,7 +343,9 @@ function Basics() {
                 <CodeBlock code={'  "model": "Mustang",'} />
                 <CodeBlock code={'  "year": 1964'} />
                 <CodeBlock code={"}"} />
-                <CodeBlock code={'print(car["brand"]) # will print "Ford"'} />
+                <CodeBlock
+                  code={'car_brand = car["brand"]) # would equal "Ford"'}
+                />
               </div>
             </div>
           </SSubSection>
@@ -366,7 +379,7 @@ function Basics() {
                 <CodeBlock code={'  "year": 2071'} />
                 <CodeBlock code={"}"} />
                 <CodeBlock
-                  code={'print(car["year"]) # will print 2071, not 1964'}
+                  code={'car_year = car["year"] # would equal 2071, not 1964'}
                 />
               </div>
             </div>
@@ -463,7 +476,7 @@ function Basics() {
             <div className="code-block">
               <CodeBlock code={"a = 24"} />
               <CodeBlock code={"b = 132"} /> <br />
-              <CodeBlock code={'if b {">"} a:'} />
+              <CodeBlock code={"if b > a:"} />
               <CodeBlock code={'  print("b is greater than a")'} />
             </div>
           </div>
@@ -626,7 +639,7 @@ function Basics() {
               <code>fname</code>and<code>lname</code>. When it's called, the two
               corresponding arguments,<code>"John"</code>and
               <code>"Doe"</code>, are sent back and will replace the variables
-              in the print statements.
+              within the function when executed.
             </p>
           </SSubSection>
         </SubSection>
