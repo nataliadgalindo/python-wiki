@@ -1,11 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { sideNav } from "../data.js"
+import { useGlobalContext } from "../context.jsx"
 
 function LearnLayout() {
-  const [path, setPath] = useState(0)
-  // const [nextPath, setNextPath] = useState(sideNav[path + 1])
-  // const [lastPath, setLastPath] = useState(sideNav[path - 1])
+  const { path, setPath } = useGlobalContext()
 
   useEffect(() => {
     scrollToTop()

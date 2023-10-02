@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./index.css"
-import { StrictMode } from "react"
+import { AppProvider } from "./context"
 import MainLayout from "./components/MainLayout"
 import LearnLayout from "./components/LearnLayout"
 import App from "./components/App.jsx"
@@ -14,20 +14,22 @@ import Styles from "./components/Styles.jsx"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <StrictMode>
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<App />} />
-        <Route path="learn" element={<LearnLayout />}>
-          <Route index element={<Basics />} />
-          <Route path="devenv" element={<DevEnv />} />
-          <Route path="errors" element={<Errors />} />
-          <Route path="debugging" element={<Debugging />} />
-          <Route path="libraries" element={<Libraries />} />
-          <Route path="styles" element={<Styles />} />
+  <AppProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<App />} />
+          <Route path="learn" element={<LearnLayout />}>
+            <Route index element={<Basics />} />
+            <Route path="devenv" element={<DevEnv />} />
+            <Route path="errors" element={<Errors />} />
+            <Route path="debugging" element={<Debugging />} />
+            <Route path="libraries" element={<Libraries />} />
+            <Route path="styles" element={<Styles />} />
+          </Route>
         </Route>
-      </Route>
-    </Routes>
-  </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
+  </AppProvider>
   // </StrictMode>
 )

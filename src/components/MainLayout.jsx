@@ -1,6 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom"
+import { useGlobalContext } from "../context.jsx"
 
 function MainLayout() {
+  const { setPath } = useGlobalContext()
+
   return (
     <>
       <nav className="top-nav">
@@ -9,7 +12,14 @@ function MainLayout() {
         </NavLink>
 
         <div className="top-links">
-          <NavLink to="learn">Learn</NavLink>
+          <NavLink
+            to="learn"
+            onClick={() => {
+              setPath(0)
+            }}
+          >
+            Learn
+          </NavLink>
           <a href="https://docs.python.org/3/" target="_blank">
             Docs
           </a>
