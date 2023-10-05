@@ -404,10 +404,7 @@ function Basics() {
               <OperationRow symbol={"-"} operation={"Subtract"} />
               <OperationRow symbol={"*"} operation={"Multiply"} />
               <OperationRow symbol={"/"} operation={"Divide"} />
-              <OperationRow
-                symbol={"**"}
-                operation={"Power (to the power of)"}
-              />
+              <OperationRow symbol={"**"} operation={"Power"} />
             </tbody>
           </table>
         </SubSection>

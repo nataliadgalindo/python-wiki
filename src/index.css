@@ -289,6 +289,20 @@ p code {
   border-radius: 4px;
 }
 
+/* operation table */
+
+th {
+  padding-right: 1rem;
+  padding-bottom: 0.4rem;
+  text-align: left;
+  border-bottom: 2px solid var(--main-blue);
+}
+
+td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
 /* page buttons */
 
 .page-btn-container {
