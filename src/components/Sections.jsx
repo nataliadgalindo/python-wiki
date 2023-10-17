@@ -20,7 +20,6 @@ export function SubSection({ children, title, desc }) {
 export function SSubSection({ children, title, desc }) {
   return (
     <article className="sub-subsection">
-      {/* <hr /> */}
       <header className="sub-subsection-header">
         <h3>{title}</h3>
         {desc}
