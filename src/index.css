@@ -198,7 +198,7 @@ main {
 }
 
 #section-header p {
-  font-size: 1.35em;
+  font-size: 1.4em;
 }
 
 /* subsections */
@@ -214,6 +214,10 @@ main {
 .subsection-header h2 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
+}
+
+.subsection-header p {
+  font-size: 1.2em;
 }
 
 .subsection-content {
