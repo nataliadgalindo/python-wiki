@@ -38,7 +38,8 @@
 body {
   min-height: 100vh;
   background-color: var(--dark-blue);
-  font-size: 14px;
+  font-size: 9px;
+  position: relative;
 }
 
 a {
@@ -54,8 +55,13 @@ p {
   font-size: 1.1em;
 }
 
+ul,
+ol {
+  padding-left: 2em;
+}
+
 li {
-  margin: 1rem 0;
+  margin: 1em 0;
 }
 
 li > strong {
@@ -74,6 +80,7 @@ li > strong {
   justify-content: space-between;
   align-items: center;
   height: calc(100vh * 0.125);
+  z-index: 1;
 }
 
 .logo img {
@@ -81,7 +88,8 @@ li > strong {
 }
 
 .top-links a {
-  margin: 0 1em;
+  margin: 0 0.5em;
+  font-size: 1.3em;
 }
 
 .top-links a:hover {
@@ -91,7 +99,7 @@ li > strong {
 /* home page */
 
 .home-page {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +107,7 @@ li > strong {
 }
 
 .home-header {
-  width: 65%;
+  width: 85%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -124,66 +132,62 @@ li > strong {
   border-radius: 30px;
   padding: 0.75em 1.25em;
   font-weight: bolder;
-  font-size: 1em;
-}
-
-/* grid container */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 23% 77%;
+  font-size: 1.4em;
 }
 
 /* side nav */
 
-.side-nav {
-  position: fixed;
-  width: 23%;
-  height: 100%;
-  height: 100%;
-  padding: 2.5em 1em 0 0;
-  border-right: 3px solid var(--grayish-blue);
+.hamburger {
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
-.side-nav button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
+.hamburger img {
+  width: 32px;
+}
+
+aside {
+  position: relative;
+  padding: 2.5em 0 0;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.side-nav {
+  display: none;
+  background-color: var(--dark-blue);
   width: 100%;
-  font-size: 0.9em;
+  text-align: center;
+}
+
+.show-nav {
+  display: block;
 }
 
 .side-nav a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 1.5em;
-  padding-right: 0.5em;
-  margin: 0.5em 0;
-  border-radius: 0 12px 12px 0;
-}
-
-.side-nav a:hover {
-  background-color: var(--grayish-blue);
+  font-size: 1.4em;
+  display: block;
+  margin: 1.25em 0;
 }
 
 .highlight-link {
-  background-color: var(--grayish-blue);
   color: var(--main-blue);
-  /* font-weight: 700; */
+  font-weight: 700;
+  text-decoration: underline var(--main-blue);
 }
 
 .side-nav img {
   opacity: 0.8;
   width: 1.6em;
+  display: none;
 }
 
 /* main content */
 
 main {
-  padding: 2.5em 4em 2.5em 3em;
-  grid-column: 2 / span 1;
+  padding: 2.5em 3em;
 }
 
 /* sections */
@@ -232,6 +236,7 @@ main {
 .reverse-img-subtitle p {
   order: 2;
 }
+
 .reverse-img-subtitle img {
   order: 1;
 }
@@ -309,10 +314,9 @@ td {
 /* page buttons */
 
 .page-btn-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: flex-start;
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  align-content: center;
   margin-top: 2em;
 }
 
@@ -321,8 +325,7 @@ td {
   align-items: center;
   column-gap: 1em;
   border-radius: 12px;
-  padding: 1.5em 1.75em;
-  min-width: 268px;
+  padding: 1.5em 0;
 }
 
 .page-btn span {
@@ -334,35 +337,154 @@ td {
   opacity: 0.8;
 }
 
-.next-page-btn {
-  margin-left: auto;
-  justify-content: end;
-}
-
-.next-page-btn p {
-  text-align: right;
-}
-
 .last-page-btn {
-  margin-right: auto;
-  justify-content: start;
-}
-
-.last-page-btn p {
+  grid-column: 1;
   text-align: left;
 }
 
-.page-btn:hover {
-  background-color: var(--grayish-blue);
-  color: var(--main-blue);
+.next-page-btn {
+  grid-column: 2;
+  text-align: right;
+  justify-content: end;
 }
 
-.page-btn:hover span {
-  color: #fff;
-}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
 
-.page-btn span:hover {
-  text-decoration: underline var(--main-blue);
+  ul,
+  ol {
+    padding-left: 3em;
+  }
+
+  /* top nav */
+
+  .top-nav {
+    padding: 0 4em 0 1.5em;
+  }
+
+  .top-links {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+  }
+
+  .top-links a {
+    font-size: 1.1em;
+  }
+
+  /* home page */
+
+  .home-page {
+    height: calc(100vh - 130px);
+  }
+
+  .home-header {
+    width: 65%;
+  }
+
+  .main-btn {
+    font-size: 1em;
+  }
+
+  /* grid container */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 23% 77%;
+  }
+
+  /* side nav */
+
+  aside {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .side-nav {
+    display: block;
+    position: fixed;
+    width: 23%;
+    height: 100%;
+    padding: 2.5em 1em 0 0;
+    border-right: 3px solid var(--grayish-blue);
+    text-align: left;
+  }
+
+  .side-nav a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    padding: 1em 0.5em 1em 1.5em;
+    margin: 1em 0;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .side-nav a:hover {
+    background-color: var(--grayish-blue);
+  }
+
+  .highlight-link {
+    background-color: var(--grayish-blue);
+    color: var(--main-blue);
+    text-decoration: none;
+    font-weight: 400;
+    /* font-weight: 700; */
+  }
+
+  .side-nav img {
+    display: block;
+  }
+
+  /* main content */
+
+  main {
+    padding: 2.5em 4em 2.5em 3em;
+    grid-column: 2 / span 1;
+  }
+
+  /* page buttons */
+
+  .page-btn-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .page-btn {
+    padding: 1.5em 1.75em;
+    min-width: 268px;
+  }
+
+  .last-page-btn {
+    margin-right: auto;
+  }
+
+  .next-page-btn {
+    margin-left: auto;
+    justify-content: end;
+  }
+
+  .page-btn:hover {
+    background-color: var(--grayish-blue);
+    color: var(--main-blue);
+  }
+
+  .page-btn:hover span {
+    color: #fff;
+  }
+
+  .page-btn span:hover {
+    text-decoration: underline var(--main-blue);
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -373,6 +495,24 @@ td {
 
 @media screen and (min-width: 1440px) {
   body {
-    font-size: 20px;
+    font-size: 23px;
+  }
+
+  .grid-container {
+    grid-template-columns: 27% 73%;
+  }
+
+  .side-nav {
+    width: 27%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    font-size: 36px;
+  }
+
+  .top-nav {
+    border-bottom: 3px solid rgb(37, 48, 65);
   }
 }
