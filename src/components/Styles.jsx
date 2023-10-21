@@ -8,14 +8,18 @@ function Styles() {
         <title>Programming Styles and Paradigms</title>
       </Helmet>
 
-      <header id="section-header">
-        <h1>Programming Styles and Paradigms</h1>
-        <p>
-          Programming styles and paradigms serve as the guiding principles that
-          define not only the structure of code but also the thought processes
-          and problem-solving techniques employed during software development.
-        </p>
-      </header>
+      <>
+        <header id="section-header">
+          <h1>Programming Styles and Paradigms</h1>
+          <p>
+            Programming styles and paradigms serve as the guiding principles
+            that define not only the structure of code but also the thought
+            processes and problem-solving techniques employed during software
+            development.
+          </p>
+        </header>
+        <hr />
+      </>
 
       <div className="section-content">
         <SubSection

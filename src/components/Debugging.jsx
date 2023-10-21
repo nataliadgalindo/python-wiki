@@ -9,14 +9,17 @@ function Debugging() {
         <title>Debugging</title>
       </Helmet>
 
-      <header id="section-header">
-        <h1>Debugging</h1>
-        <p>
-          Debugging is a critical skill that separates the novices from the
-          experts. It's the art of finding and fixing errors, ensuring that your
-          code runs smoothly and produces the desired results.
-        </p>
-      </header>
+      <>
+        <header id="section-header">
+          <h1>Debugging</h1>
+          <p>
+            Debugging is a critical skill that separates the novices from the
+            experts. It's the art of finding and fixing errors, ensuring that
+            your code runs smoothly and produces the desired results.
+          </p>
+        </header>
+        <hr />
+      </>
 
       <div className="section-content">
         {debugging.map(({ title, desc, img, reverse }, i) => {

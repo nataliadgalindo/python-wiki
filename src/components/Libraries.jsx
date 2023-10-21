@@ -8,15 +8,18 @@ function Libraries() {
         <title>Python Libraries</title>
       </Helmet>
 
-      <header id="section-header">
-        <h1>Python Libraries</h1>
-        <p>
-          Libraries are collections of pre-written code that provide useful
-          functionality to programmers. They are like toolkits that extend
-          programming languages' capabilities and save you from having to write
-          everything from scratch.
-        </p>
-      </header>
+      <>
+        <header id="section-header">
+          <h1>Python Libraries</h1>
+          <p>
+            Libraries are collections of pre-written code that provide useful
+            functionality to programmers. They are like toolkits that extend
+            programming languages' capabilities and save you from having to
+            write everything from scratch.
+          </p>
+        </header>
+        <hr />
+      </>
 
       <div className="section-content">
         <SubSection
