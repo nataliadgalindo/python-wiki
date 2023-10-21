@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import { debugging } from "../data"
-import { SubSection, SSubSection } from "./Sections"
+import { SubSection } from "./Sections"
 
 function Debugging() {
   return (

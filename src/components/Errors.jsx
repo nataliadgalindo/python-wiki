@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet"
-// import { errors } from "../data"
-import { SubSection, SSubSection, CodeBlock } from "./Sections"
+import { SubSection, CodeBlock } from "./Sections"
 
 function Errors() {
   return (
