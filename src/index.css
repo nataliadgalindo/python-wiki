@@ -120,7 +120,7 @@ li > strong {
 }
 
 .home-header h1 {
-  font-size: 3.5em;
+  font-size: 4em;
 }
 
 .home-header p {
@@ -132,7 +132,7 @@ li > strong {
   border-radius: 30px;
   padding: 0.75em 1.25em;
   font-weight: bolder;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 /* side nav */
@@ -167,7 +167,7 @@ aside {
 }
 
 .side-nav a {
-  font-size: 1.4em;
+  font-size: 1.5em;
   display: block;
   margin: 1.25em 0;
 }
@@ -197,12 +197,12 @@ main {
 }
 
 #section-header h1 {
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 0.5em;
 }
 
 #section-header p {
-  font-size: 1.25em;
+  font-size: 1.35em;
 }
 
 /* subsections */
@@ -216,7 +216,7 @@ main {
 }
 
 .subsection-header h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 0.5em;
 }
 
@@ -254,7 +254,7 @@ main {
 }
 
 .sub-subsection-header h3 {
-  font-size: 1.4em;
+  font-size: 1.5em;
   margin-bottom: 1em;
 }
 
@@ -431,8 +431,7 @@ td {
     background-color: var(--grayish-blue);
     color: var(--main-blue);
     text-decoration: none;
-    font-weight: 400;
-    /* font-weight: 700; */
+    font-weight: 700;
   }
 
   .side-nav img {
