@@ -352,7 +352,8 @@ function Basics() {
             desc={
               <p>
                 Unlike lists, dictionaries cannot have multiple keys of the same
-                name, the value will just overwrite any previous existing ones.
+                name, the value will just overwrite any previously existing
+                ones.
               </p>
             }
           >
