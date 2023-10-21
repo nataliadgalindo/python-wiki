@@ -1,10 +1,11 @@
 import { NavLink, Outlet } from "react-router-dom"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { sideNav } from "../data.js"
 import { useGlobalContext } from "../context.jsx"
 
 function LearnLayout() {
   const { path, setPath } = useGlobalContext()
+  const [showNav, setShowNav] = useState(false)
 
   useEffect(() => {
     scrollToTop()
@@ -24,19 +25,25 @@ function LearnLayout() {
 
   return (
     <div className="grid-container">
-      <aside className="side-nav">
-        <nav>
+      <aside>
+        <button
+          className="hamburger"
+          onClick={() => setShowNav((prev) => !prev)}
+        >
+          <img src="/logo.png" alt="python wiki" />
+        </button>
+        <nav className={`side-nav ${showNav && "show-nav"}`}>
           {sideNav.map(({ route, title }, i) => {
             return (
-              <button key={i} onClick={() => setPath(i)}>
-                <NavLink
-                  to={route}
-                  className={path === i ? "highlight-link" : ""}
-                >
-                  {title}
-                  <img src="/assets/images/arrow-right.svg" alt="" />
-                </NavLink>
-              </button>
+              <NavLink
+                key={i}
+                onClick={() => setPath(i)}
+                to={route}
+                className={path === i ? "highlight-link" : ""}
+              >
+                {title}
+                <img src="/assets/images/arrow-right.svg" alt="" />
+              </NavLink>
             )
           })}
         </nav>
