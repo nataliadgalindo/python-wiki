@@ -376,10 +376,6 @@ td {
 
   /* home page */
 
-  .home-page {
-    height: calc(100vh - 130px);
-  }
-
   .home-header {
     width: 65%;
   }
