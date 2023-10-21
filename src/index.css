@@ -226,11 +226,19 @@ main {
 
 .img-subtitle {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 75% 20%;
+  column-gap: 5%;
+}
+
+.img-subtitle img {
+  width: 6em;
+  justify-self: center;
+  align-self: center;
 }
 
 .reverse-img-subtitle {
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 75%;
+  column-gap: 5%;
 }
 
 .reverse-img-subtitle p {
@@ -239,12 +247,6 @@ main {
 
 .reverse-img-subtitle img {
   order: 1;
-}
-
-.img-subtitle img {
-  width: 6em;
-  justify-self: center;
-  align-self: center;
 }
 
 /* sub-subsections */
