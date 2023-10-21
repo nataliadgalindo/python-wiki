@@ -483,6 +483,18 @@ td {
     background-color: var(--grayish-blue);
   }
 
+  /* img subtitle */
+
+  .img-subtitle {
+    grid-template-columns: 80% 20%;
+    column-gap: 0;
+  }
+
+  .reverse-img-subtitle {
+    grid-template-columns: 20% 80%;
+    column-gap: 0;
+  }
+
   /* page buttons */
 
   .page-btn-container {
