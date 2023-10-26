@@ -100,11 +100,11 @@ li > strong {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
 .home-header {
   width: 85%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
