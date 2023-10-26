@@ -1,8 +1,9 @@
+import React from "react"
 import { NavLink, Outlet } from "react-router-dom"
-import { useGlobalContext } from "../context.jsx"
+import useLearnPathStore from "../storage/learnPathStore"
 
 function MainLayout() {
-  const { setPath } = useGlobalContext()
+  const { setPath } = useLearnPathStore()
 
   return (
     <>
@@ -20,12 +21,13 @@ function MainLayout() {
           >
             Learn
           </NavLink>
-          <a href="https://docs.python.org/3/" target="_blank">
+          <a href="https://docs.python.org/3/" target="_blank" rel="noreferrer">
             Docs
           </a>
           <a
             href="https://www.w3schools.com/python/python_intro.asp"
             target="_blank"
+            rel="noreferrer"
           >
             W3Schools
           </a>

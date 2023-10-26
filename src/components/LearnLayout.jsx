@@ -1,10 +1,11 @@
+import React from "react"
 import { NavLink, Outlet } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { sideNav } from "../data.js"
-import { useGlobalContext } from "../context.jsx"
+import useLearnPathStore from "../storage/learnPathStore"
 
 function LearnLayout() {
-  const { path, setPath } = useGlobalContext()
+  const { path, setPath, increment, decrement } = useLearnPathStore()
   const [showNav, setShowNav] = useState(false)
 
   useEffect(() => {
@@ -16,11 +17,11 @@ function LearnLayout() {
   }
 
   function lastPage() {
-    setPath(path - 1)
+    decrement()
   }
 
   function nextPage() {
-    setPath(path + 1)
+    increment()
   }
 
   return (
