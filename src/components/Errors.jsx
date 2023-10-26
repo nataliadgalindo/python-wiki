@@ -1,3 +1,4 @@
+import React from "react"
 import { Helmet } from "react-helmet"
 import { SubSection, CodeBlock } from "./Sections"
 
@@ -12,8 +13,8 @@ function Errors() {
         <header id="section-header">
           <h1>Common Errors</h1>
           <p>
-            In this section, we're going to take a closer look at some of the
-            most common Python errors that programmers encounter.
+            In this section, we&apos;re going to take a closer look at some of
+            the most common Python errors that programmers encounter.
           </p>
         </header>
         <hr />

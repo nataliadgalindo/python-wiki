@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from "react"
 import { Helmet } from "react-helmet"
 import { funcs } from "../data"
 import { SubSection, SSubSection, CodeBlock } from "./Sections"
@@ -34,7 +36,8 @@ function Basics() {
           title={"Intro"}
           desc={
             <p>
-              Get to know more about Python and why, where and how it's used.
+              Get to know more about Python and why, where and how it&apos;s
+              used.
             </p>
           }
         >
@@ -56,9 +59,9 @@ function Basics() {
               <p>
                 Python was created by a programmer named Guido van Rossum in the
                 late 1980s, released in 1991. Guido wanted to make a programming
-                language that was easy to read and write. He named it "Python"
-                after the British comedy group Monty Python because he liked
-                their TV shows.
+                language that was easy to read and write. He named it
+                &quot;Python&quot; after the British comedy group Monty Python
+                because he liked their TV shows.
               </p>
             }
           />
@@ -203,7 +206,7 @@ function Basics() {
               <br />
               <p>
                 Lists are created with the square brackets<code>[]</code>
-                .They're also an example of <u>data structures</u>.
+                .They&apos;re also an example of <u>data structures</u>.
               </p>
             </>
           }
@@ -254,7 +257,7 @@ function Basics() {
             desc={
               <p>
                 Lists are changeable, meaning you can add, remove, change or
-                replace values after it's been created.
+                replace values after it&apos;s been created.
               </p>
             }
           />
@@ -315,9 +318,9 @@ function Basics() {
                 </p>
                 <br />
                 <p>
-                  To retrieve the item you want, it's almost the same as lists
-                  but instead of the index number, you use the corresponding key
-                  name.
+                  To retrieve the item you want, it&apos;s almost the same as
+                  lists but instead of the index number, you use the
+                  corresponding key name.
                 </p>
               </>
             }
@@ -342,7 +345,8 @@ function Basics() {
             desc={
               <p>
                 Dictionaries are also changeable, like lists, and items can be
-                added, removed, changed or replaced after it's been created.
+                added, removed, changed or replaced after it&apos;s been
+                created.
               </p>
             }
           ></SSubSection>
@@ -468,9 +472,9 @@ function Basics() {
 
           <p>
             On the first line of the if statement, we check if the value of
-            <code>b</code>is greater than<code>a</code>, and if it's true, the
-            rest of the code after the colon<code>:</code>is executed and we get
-            the printed message.
+            <code>b</code>is greater than<code>a</code>, and if it&apos;s true,
+            the rest of the code after the colon<code>:</code>is executed and we
+            get the printed message.
           </p>
 
           <SSubSection
@@ -503,9 +507,9 @@ function Basics() {
                 </div>
                 <p>
                   Since<code>temperature</code>is equal to 25, the first
-                  condition would be false as it's not greater than 30. However,
-                  it is greater than 20 so the second condition would be true
-                  and the print statement would execute.
+                  condition would be false as it&apos;s not greater than 30.
+                  However, it is greater than 20 so the second condition would
+                  be true and the print statement would execute.
                 </p>
               </li>
 
@@ -515,7 +519,7 @@ function Basics() {
                 <strong>else:</strong>
                 <br />
                 When none of the conditions turned out to be true, you can use
-                an else statement. It's basically like a last resort if
+                an else statement. It&apos;s basically like a last resort if
                 everything else failed.
                 <div className="example-block">
                   <h3>Example</h3>
@@ -534,7 +538,7 @@ function Basics() {
                 <p>
                   Since<code>temperature</code>is 10, the first condition would
                   be false. Moving on to the second condition, that would also
-                  be false and as there's no more conditions to check, it
+                  be false and as there&apos;s no more conditions to check, it
                   defaults to the<code>else</code>block and executes the final
                   print statement.
                 </p>
@@ -599,7 +603,7 @@ function Basics() {
             <p>
               A <i>parameter</i> is a variable set inside the parenthesis of the
               function when you define it. You can have as many as you want, as
-              long as they're separated by a comma.
+              long as they&apos;re separated by a comma.
             </p>
             <br />
             <p>
@@ -621,10 +625,10 @@ function Basics() {
             </div>
             <p>
               When the function is defined, two parameters are set,
-              <code>fname</code>and<code>lname</code>. When it's called, the two
-              corresponding arguments,<code>"John"</code>and
-              <code>"Doe"</code>, are sent back and will replace the variables
-              within the function when executed.
+              <code>fname</code>and<code>lname</code>. When it&apos;s called,
+              the two corresponding arguments,<code>&quot;John&quot;</code>and
+              <code>&quot;Doe&quot;</code>, are sent back and will replace the
+              variables within the function when executed.
             </p>
           </SSubSection>
         </SubSection>
@@ -663,8 +667,8 @@ function Basics() {
                 variables or functions live. Variables in a local scope can only
                 be used and seen from within that box. When you create a
                 variable inside a function, it belongs to the local scope of
-                that function, meaning you can't use it anywhere else except
-                there.
+                that function, meaning you can&apos;t use it anywhere else
+                except there.
                 <div className="example-block">
                   <h3>Example</h3>
                   <div className="code-block">
@@ -681,7 +685,7 @@ function Basics() {
                 Variables and functions in the global scope can be used and seen
                 from anywhere in your code. When you create a variable or
                 function outside of any function or anywhere in a local scope,
-                it's in the global scope.
+                it&apos;s in the global scope.
                 <div className="example-block">
                   <h3>Example</h3>
 
@@ -748,9 +752,9 @@ function Basics() {
             <p>
               On the first line, we declare a variable<code>fruits</code>to a
               list of fruits. When we begin writing the for loop, we set the
-              variable<code>f</code>that'll temporarily assign itself to the
-              value of the current item until the code to it executes, the item
-              gets printed, and moves on the next item.
+              variable<code>f</code>that&apos;ll temporarily assign itself to
+              the value of the current item until the code to it executes, the
+              item gets printed, and moves on the next item.
             </p>
           </SSubSection>
 
@@ -776,7 +780,7 @@ function Basics() {
 
             <p>Once the condition becomes false, the loop will end.</p>
             <p>
-              If we didn't add the last line <code>i += 1</code>, which
+              If we didn&apos;t add the last line <code>i += 1</code>, which
               increments it (increases the value), the loop would continue
               forever and cause the program to crash.
             </p>

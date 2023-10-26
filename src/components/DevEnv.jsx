@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet"
+import React from "react"
 import { ide, compiler } from "../data"
-import { SubSection, SSubSection } from "./Sections"
+import { SubSection } from "./Sections"
 
 function DevEnv() {
   return (
@@ -13,9 +14,9 @@ function DevEnv() {
         <header id="section-header">
           <h1>Development Environment</h1>
           <p>
-            A development environment, often referred to as a "dev environment",
-            is the digital workspace where programmers design, test, and improve
-            software applications.
+            A development environment, often referred to as a &quot;dev
+            environment&quot;, is the digital workspace where programmers
+            design, test, and improve software applications.
           </p>
         </header>
         <hr />

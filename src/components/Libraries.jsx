@@ -1,3 +1,4 @@
+import React from "react"
 import { Helmet } from "react-helmet"
 import { SubSection, CodeBlock } from "./Sections"
 
@@ -14,7 +15,7 @@ function Libraries() {
           <p>
             Libraries are collections of pre-written code that provide useful
             functionality to programmers. They are like toolkits that extend
-            programming languages' capabilities and save you from having to
+            programming languages&apos; capabilities and save you from having to
             write everything from scratch.
           </p>
         </header>

@@ -1,3 +1,4 @@
+import React from "react"
 import { Helmet } from "react-helmet"
 import { debugging } from "../data"
 import { SubSection } from "./Sections"
@@ -14,8 +15,8 @@ function Debugging() {
           <h1>Debugging</h1>
           <p>
             Debugging is a critical skill that separates the novices from the
-            experts. It's the art of finding and fixing errors, ensuring that
-            your code runs smoothly and produces the desired results.
+            experts. It&apos;s the art of finding and fixing errors, ensuring
+            that your code runs smoothly and produces the desired results.
           </p>
         </header>
         <hr />
